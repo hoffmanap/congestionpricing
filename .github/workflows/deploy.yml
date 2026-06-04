@@ -1,32 +1,25 @@
 name: Fetch MTA Data
 on:
   schedule:
-    - cron: '0 0 * * *' # Runs daily at midnight
-  workflow_dispatch:    # Allows you to trigger it manually from the Actions tab
+    - cron: '0 0 * * *'
+  workflow_dispatch:
 jobs:
   fetch:
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v3
-
+      - uses: actions/checkout@v3
       - name: Fetch Data
         run: |
-          # The single quotes around the URL prevent shell expansion of the $ symbol
           curl -H "X-App-Token: ${{ secrets.API_KEY }}" \
-          'https://data.ny.gov/resource/t6yz-b64h.json?$limit=100' > data.json
-
+          'https://data.ny.gov/resource/t6yz-b64h.json?$limit=5000' > data.json
       - name: Commit and Push
         run: |
           git config user.name "GitHub Action"
           git config user.email "action@github.com"
-          # Only commit if there are actual changes
           if [[ -n $(git status -s) ]]; then
             git add data.json
             git commit -m "Update MTA data: $(date)"
             git push
-          else
-            echo "No changes to commit."
           fi
