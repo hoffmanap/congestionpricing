@@ -2,54 +2,80 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MTA Congestion Relief Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-<body class="bg-gray-50 p-8">
-    <div id="app" class="max-w-5xl mx-auto">
-        <h1 class="text-2xl font-bold mb-6">MTA Congestion Relief Zone Data</h1>
-        <div id="status" class="text-gray-600">Loading data...</div>
-        <canvas id="myChart" class="bg-white p-4 rounded shadow"></canvas>
+<body class="bg-gray-50 min-h-screen p-4 md:p-8">
+    <div class="max-w-6xl mx-auto">
+        <header class="mb-8">
+            <h1 class="text-3xl font-bold text-gray-900">MTA Congestion Relief Zone</h1>
+            <p id="status" class="text-gray-500 mt-2">Initializing connection...</p>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                <canvas id="trafficChart" class="w-full"></canvas>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                <h2 class="text-lg font-semibold mb-4">Data Feed</h2>
+                <div id="data-list" class="space-y-2 text-sm max-h-96 overflow-y-auto"></div>
+            </div>
+        </div>
     </div>
 
     <script>
-        const API_KEY = 'YOUR_API_KEY_HERE'; // <--- PASTE YOUR KEY HERE
-        const API_URL = "https://data.ny.gov/resource/t6yz-b64h.json?$limit=1000";
+        // The GitHub Action will automatically replace the string below with your secret
+        const API_KEY = "REPLACE_WITH_SECRET_TOKEN"; 
+        const API_URL = "https://data.ny.gov/resource/t6yz-b64h.json?$limit=100";
 
-        async function fetchData() {
+        async function init() {
             try {
                 const response = await fetch(API_URL, {
                     headers: { 'X-App-Token': API_KEY }
                 });
-                if (!response.ok) throw new Error(`Error: ${response.status}`);
+                if (!response.ok) throw new Error(`API Status: ${response.status}`);
                 
                 const data = await response.json();
-                document.getElementById('status').textContent = `Loaded ${data.length} records.`;
-                renderChart(data);
+                document.getElementById('status').textContent = `Successfully loaded ${data.length} records.`;
+                
+                renderDashboard(data);
             } catch (err) {
-                document.getElementById('status').innerHTML = `<span class="text-red-500">${err.message}</span>`;
+                document.getElementById('status').innerHTML = `<span class="text-red-500 font-bold">Error: ${err.message}</span>`;
             }
         }
 
-        function renderChart(data) {
-            const ctx = document.getElementById('myChart').getContext('2d');
-            // Aggregate by Vehicle Class
-            const counts = data.reduce((acc, row) => {
-                const cls = row.vehicle_class || "Unknown";
-                acc[cls] = (acc[cls] || 0) + parseInt(row.crz_entries || 0);
+        function renderDashboard(data) {
+            const ctx = document.getElementById('trafficChart').getContext('2d');
+            const list = document.getElementById('data-list');
+
+            // Aggregate data (Example logic: grouping by vehicle class)
+            const summary = data.reduce((acc, row) => {
+                const label = row.vehicle_class || "Unknown";
+                acc[label] = (acc[label] || 0) + 1;
                 return acc;
             }, {});
 
+            // Render Chart
             new Chart(ctx, {
-                type: 'bar',
+                type: 'doughnut',
                 data: {
-                    labels: Object.keys(counts),
-                    datasets: [{ label: 'CRZ Entries', data: Object.values(counts), backgroundColor: '#3b82f6' }]
+                    labels: Object.keys(summary),
+                    datasets: [{ data: Object.values(summary), backgroundColor: ['#3b82f6', '#10b981', '#f59e0b', '#ef4444'] }]
                 }
             });
+
+            // Populate List
+            data.forEach(item => {
+                const div = document.createElement('div');
+                div.className = "p-2 border-b border-gray-100 flex justify-between";
+                div.innerHTML = `<span>${item.vehicle_class || 'N/A'}</span> <span class="font-mono text-gray-400">${item.crz_entries || 0}</span>`;
+                list.appendChild(div);
+            });
         }
-        fetchData();
+
+        init();
     </script>
 </body>
 </html>
