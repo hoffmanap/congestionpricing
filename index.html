@@ -2,59 +2,82 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MTA Congestion Relief Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-<body class="bg-gray-50 p-8">
-    <div class="max-w-4xl mx-auto">
-        <h1 class="text-2xl font-bold mb-4">MTA Congestion Relief Data</h1>
-        <div id="status" class="mb-4 text-sm text-gray-600">Connecting to API...</div>
-        <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-            <canvas id="mtaChart"></canvas>
+<body class="bg-gray-50 min-h-screen p-6">
+    <div class="max-w-5xl mx-auto">
+        <header class="mb-8">
+            <h1 class="text-3xl font-bold text-gray-900">MTA Congestion Relief Zone</h1>
+            <p id="status" class="text-gray-500 mt-2">Connecting to live data...</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                <h2 class="text-lg font-semibold mb-4">Entries by Vehicle Class</h2>
+                <canvas id="mtaChart"></canvas>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                <h2 class="text-lg font-semibold mb-4">Recent Data Samples</h2>
+                <div id="data-list" class="space-y-2 text-sm max-h-96 overflow-y-auto"></div>
+            </div>
         </div>
     </div>
 
     <script>
-        // Placeholder for GitHub Actions injection
+        // GitHub Action will replace the string below during deployment
         const API_KEY = "REPLACE_WITH_SECRET_TOKEN"; 
-        const API_URL = "const API_URL = "https://corsproxy.io/?https://data.ny.gov/resource/t6yz-b64h.json?$limit=100"
+        
+        // Use proxy to avoid CORS/403 errors
+        const PROXY = "https://corsproxy.io/?";
+        const TARGET = "https://data.ny.gov/resource/t6yz-b64h.json?$limit=50";
+        const API_URL = PROXY + encodeURIComponent(TARGET);
 
-        async function loadData() {
+        async function init() {
             try {
                 const response = await fetch(API_URL, {
-                    method: 'GET',
-                    headers: {
-                        'X-App-Token': API_KEY,
-                        'Accept': 'application/json'
-                    }
+                    headers: { 'X-App-Token': API_KEY, 'Accept': 'application/json' }
                 });
-
-                if (!response.ok) throw new Error(`HTTP ${response.status}: Failed to reach API.`);
+                
+                if (!response.ok) throw new Error(`API Status: ${response.status}`);
                 
                 const data = await response.json();
                 document.getElementById('status').textContent = `Loaded ${data.length} records.`;
                 render(data);
             } catch (err) {
-                document.getElementById('status').innerHTML = `<span class="text-red-600">${err.message}</span>`;
+                document.getElementById('status').innerHTML = `<span class="text-red-500 font-bold">Error: ${err.message}</span>`;
             }
         }
 
         function render(data) {
             const ctx = document.getElementById('mtaChart').getContext('2d');
-            // Assuming 'vehicle_class' and 'crz_entries' exist based on typical MTA datasets
-            const labels = data.map(d => d.vehicle_class || "N/A");
-            const values = data.map(d => parseFloat(d.crz_entries || 0));
+            const list = document.getElementById('data-list');
+
+            // Aggregate data by vehicle_class
+            const summary = data.reduce((acc, row) => {
+                const cls = row.vehicle_class || "Unknown";
+                acc[cls] = (acc[cls] || 0) + (parseInt(row.crz_entries) || 0);
+                return acc;
+            }, {});
 
             new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: labels,
-                    datasets: [{ label: 'Entries', data: values, backgroundColor: '#2563eb' }]
+                    labels: Object.keys(summary),
+                    datasets: [{ label: 'CRZ Entries', data: Object.values(summary), backgroundColor: '#2563eb' }]
                 }
             });
+
+            data.forEach(item => {
+                const div = document.createElement('div');
+                div.className = "p-2 border-b text-gray-700 flex justify-between";
+                div.innerHTML = `<span>${item.vehicle_class || 'N/A'}</span> <span>${item.crz_entries || 0}</span>`;
+                list.appendChild(div);
+            });
         }
-        loadData();
+        init();
     </script>
 </body>
 </html>
