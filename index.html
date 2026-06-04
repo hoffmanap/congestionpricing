@@ -12,7 +12,6 @@
             <h1 class="text-3xl font-bold text-gray-900">MTA Congestion Relief Zone</h1>
             <select id="timeFilter" onchange="render()" class="mt-4 p-2 border rounded shadow-sm">
                 <option value="dow">Average by Day of Week</option>
-                <option value="monthly">Monthly Trend</option>
                 <option value="tod">Time of Day (Hourly)</option>
             </select>
         </header>
@@ -34,15 +33,16 @@
             const filter = document.getElementById('timeFilter').value;
             const ctx = document.getElementById('mtaChart').getContext('2d');
             
+            // Map data using correct field names from your snippet
             const processed = cachedData.map(d => ({
-                dateObj: new Date(d.date),
+                dateObj: new Date(d.toll_hour), // Corrected field
                 entries: parseInt(d.crz_entries) || 0
             }));
 
             let labels, values;
 
             if (filter === 'dow') {
-                const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+                const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
                 const summary = processed.reduce((acc, row) => {
                     const d = days[row.dateObj.getDay()];
                     acc[d] = (acc[d] || 0) + row.entries;
@@ -50,8 +50,8 @@
                 }, {});
                 labels = days;
                 values = days.map(d => summary[d] || 0);
-            } else if (filter === 'tod') {
-                // Aggregate by Hour (0-23)
+            } else {
+                // Aggregating by hour (0-23)
                 const summary = processed.reduce((acc, row) => {
                     const hr = row.dateObj.getHours();
                     acc[hr] = (acc[hr] || 0) + row.entries;
@@ -59,20 +59,12 @@
                 }, {});
                 labels = Array.from({length: 24}, (_, i) => `${i}:00`);
                 values = Array.from({length: 24}, (_, i) => summary[i] || 0);
-            } else {
-                const months = {};
-                processed.forEach(r => {
-                    const m = r.dateObj.toLocaleString('default', { month: 'short' });
-                    months[m] = (months[m] || 0) + r.entries;
-                });
-                labels = Object.keys(months);
-                values = Object.values(months);
             }
 
             if (window.myChart instanceof Chart) window.myChart.destroy();
             window.myChart = new Chart(ctx, {
-                type: 'line',
-                data: { labels, datasets: [{ label: 'Entries', data: values, borderColor: '#2563eb', fill: true }] }
+                type: 'bar',
+                data: { labels, datasets: [{ label: 'Total CRZ Entries', data: values, backgroundColor: '#2563eb' }] }
             });
         }
         init();
