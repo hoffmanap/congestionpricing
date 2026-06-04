@@ -1,29 +1,23 @@
-name: Deploy Dashboard
+name: Fetch MTA Data
 on:
-  push:
-    branches:
-      - main
-
-permissions:
-  contents: write
-
+  schedule:
+    - cron: '0 0 * * *' # Runs daily at midnight
+  workflow_dispatch:    # Allows you to trigger it manually from the Actions tab
 jobs:
-  build:
+  fetch:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v3
-
-      - name: Inject Secret
-        shell: bash
-        env:
-          API_KEY_SECRET: ${{ secrets.API_KEY }}
+      - uses: actions/checkout@v3
+      - name: Fetch Data
         run: |
-          # Use envsubst to replace ${API_KEY_SECRET} in the file
-          envsubst '${API_KEY_SECRET}' < index.html > index.tmp && mv index.tmp index.html
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
+          curl -H "X-App-Token: ${{ secrets.API_KEY }}" \
+          "https://data.ny.gov/resource/t6yz-b64h.json?$limit=100" > data.json
+      - name: Commit
+        run: |
+          git config user.name "GitHub Action"
+          git config user.email "action@github.com"
+          git add data.json
+          git commit -m "Update MTA data"
+          git push
