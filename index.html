@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MTA Congestion Relief Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gray-50 p-8">
+    <div id="app" class="max-w-5xl mx-auto">
+        <h1 class="text-2xl font-bold mb-6">MTA Congestion Relief Zone Data</h1>
+        <div id="status" class="text-gray-600">Loading data...</div>
+        <canvas id="myChart" class="bg-white p-4 rounded shadow"></canvas>
+    </div>
+
+    <script>
+        const API_KEY = 'YOUR_API_KEY_HERE'; // <--- PASTE YOUR KEY HERE
+        const API_URL = "https://data.ny.gov/resource/t6yz-b64h.json?$limit=1000";
+
+        async function fetchData() {
+            try {
+                const response = await fetch(API_URL, {
+                    headers: { 'X-App-Token': API_KEY }
+                });
+                if (!response.ok) throw new Error(`Error: ${response.status}`);
+                
+                const data = await response.json();
+                document.getElementById('status').textContent = `Loaded ${data.length} records.`;
+                renderChart(data);
+            } catch (err) {
+                document.getElementById('status').innerHTML = `<span class="text-red-500">${err.message}</span>`;
+            }
+        }
+
+        function renderChart(data) {
+            const ctx = document.getElementById('myChart').getContext('2d');
+            // Aggregate by Vehicle Class
+            const counts = data.reduce((acc, row) => {
+                const cls = row.vehicle_class || "Unknown";
+                acc[cls] = (acc[cls] || 0) + parseInt(row.crz_entries || 0);
+                return acc;
+            }, {});
+
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: Object.keys(counts),
+                    datasets: [{ label: 'CRZ Entries', data: Object.values(counts), backgroundColor: '#3b82f6' }]
+                }
+            });
+        }
+        fetchData();
+    </script>
+</body>
+</html>
