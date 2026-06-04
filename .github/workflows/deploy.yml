@@ -9,15 +9,24 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
       - name: Fetch Data
         run: |
+          # The single quotes around the URL prevent shell expansion of the $ symbol
           curl -H "X-App-Token: ${{ secrets.API_KEY }}" \
-          "https://data.ny.gov/resource/t6yz-b64h.json?$limit=100" > data.json
-      - name: Commit
+          'https://data.ny.gov/resource/t6yz-b64h.json?$limit=100' > data.json
+
+      - name: Commit and Push
         run: |
           git config user.name "GitHub Action"
           git config user.email "action@github.com"
-          git add data.json
-          git commit -m "Update MTA data"
-          git push
+          # Only commit if there are actual changes
+          if [[ -n $(git status -s) ]]; then
+            git add data.json
+            git commit -m "Update MTA data: $(date)"
+            git push
+          else
+            echo "No changes to commit."
+          fi
