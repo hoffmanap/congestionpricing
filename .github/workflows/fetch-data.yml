@@ -1,0 +1,31 @@
+name: Fetch and Summarize MTA Data
+on:
+  schedule:
+    - cron: '0 0 * * *' # Midnight daily
+  workflow_dispatch:
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+      - name: Install dependencies
+        run: pip install pandas
+      - name: Fetch and Summarize
+        run: |
+          curl -H "X-App-Token: ${{ secrets.API_KEY }}" \
+          'https://data.ny.gov/resource/t6yz-b64h.json?$limit=50000' > data.json
+          python summarize.py
+      - name: Commit and Push
+        run: |
+          git config user.name "GitHub Action"
+          git config user.email "action@github.com"
+          git add summary.json
+          # Commit only if there's a change
+          git commit -m "Update mobility summary: $(date)" || echo "No changes to commit"
+          git push
