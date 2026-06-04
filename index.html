@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>MTA Mobility Benchmark Dashboard</title>
+    <title>MTA Mobility Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -13,54 +13,28 @@
             <canvas id="mtaChart" height="100"></canvas>
         </div>
     </div>
-
     <script>
         async function init() {
-            const res = await fetch('./data.json');
+            const res = await fetch('./summary.json');
             const data = await res.json();
-            render(data);
-        }
-
-        function render(data) {
             const ctx = document.getElementById('mtaChart').getContext('2d');
             const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-            
-            // 1. Group data by Day of Week and Hour
-            const dailyData = {};
-            data.forEach(row => {
-                const date = new Date(row.toll_hour);
-                const day = row.day_of_week;
-                const hour = date.getHours();
-                if (!dailyData[day]) dailyData[day] = new Array(24).fill(0);
-                dailyData[day][hour] += parseInt(row.crz_entries) || 0;
-            });
-
-            // 2. Prepare datasets
             const colors = ['#f87171', '#fb923c', '#fbbf24', '#4ade80', '#22d3ee', '#818cf8', '#e879f9'];
+            
             const datasets = days.map((day, i) => ({
                 label: day,
-                data: dailyData[day] || new Array(24).fill(0),
+                data: Array.from({length: 24}, (_, h) => {
+                    const row = data.find(r => r.day === day && r.hour === h);
+                    return row ? row.crz_entries : 0;
+                }),
                 borderColor: colors[i],
-                fill: false,
-                tension: 0.3
+                fill: false, tension: 0.3
             }));
-
-            // 3. Add Benchmark (Most Recent Day found in data)
-            const mostRecentDate = new Date(Math.max(...data.map(d => new Date(d.toll_hour))));
-            const recentDayName = days[mostRecentDate.getDay()];
-            datasets.push({
-                label: `Benchmark: ${recentDayName} (Most Recent)`,
-                data: dailyData[recentDayName],
-                borderColor: '#000000',
-                borderWidth: 4,
-                borderDash: [5, 5],
-                fill: false
-            });
 
             new Chart(ctx, {
                 type: 'line',
                 data: { labels: Array.from({length: 24}, (_, i) => `${i}:00`), datasets },
-                options: { responsive: true, scales: { y: { beginAtZero: true } } }
+                options: { responsive: true }
             });
         }
         init();
