@@ -4,6 +4,10 @@ on:
     branches:
       - main
 
+# ADD THIS PERMISSIONS BLOCK
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
