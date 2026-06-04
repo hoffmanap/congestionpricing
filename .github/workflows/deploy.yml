@@ -17,11 +17,10 @@ jobs:
       - name: Inject Secret
         shell: bash
         env:
-          # This maps your GitHub Secret to an environment variable
           API_KEY_SECRET: ${{ secrets.API_KEY }}
         run: |
-          # Use | as the delimiter to avoid issues with potential symbols in your key
-          sed -i "s|REPLACE_WITH_SECRET_TOKEN|$API_KEY_SECRET|g" index.html
+          # Use envsubst to replace ${API_KEY_SECRET} in the file
+          envsubst '${API_KEY_SECRET}' < index.html > index.tmp && mv index.tmp index.html
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
