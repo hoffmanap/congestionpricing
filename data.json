@@ -1,5 +1,4 @@
 {
-  "code" : "permission_denied",
   "error" : true,
-  "message" : "Invalid app_token specified"
+  "message" : "Unrecognized arguments []"
 }
