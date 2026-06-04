@@ -27,10 +27,10 @@
     </div>
 
     <script>
-        // GitHub Action will replace the string below during deployment
-        const API_KEY = "REPLACE_WITH_SECRET_TOKEN"; 
+        // This placeholder will be replaced by your GitHub Secret via envsubst
+        const API_KEY = "fr1fluj1lloxoxwbj8h663oh"; 
         
-        // Use proxy to avoid CORS/403 errors
+        // Proxy to bypass CORS/403
         const PROXY = "https://corsproxy.io/?";
         const TARGET = "https://data.ny.gov/resource/t6yz-b64h.json?$limit=50";
         const API_URL = PROXY + encodeURIComponent(TARGET);
@@ -55,7 +55,6 @@
             const ctx = document.getElementById('mtaChart').getContext('2d');
             const list = document.getElementById('data-list');
 
-            // Aggregate data by vehicle_class
             const summary = data.reduce((acc, row) => {
                 const cls = row.vehicle_class || "Unknown";
                 acc[cls] = (acc[cls] || 0) + (parseInt(row.crz_entries) || 0);
