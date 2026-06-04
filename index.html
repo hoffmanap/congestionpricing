@@ -13,6 +13,7 @@
             <select id="timeFilter" onchange="render()" class="mt-4 p-2 border rounded shadow-sm">
                 <option value="dow">Average by Day of Week</option>
                 <option value="monthly">Monthly Trend</option>
+                <option value="tod">Time of Day (Hourly)</option>
             </select>
         </header>
         <div class="bg-white p-6 rounded-xl shadow-sm border">
@@ -49,8 +50,16 @@
                 }, {});
                 labels = days;
                 values = days.map(d => summary[d] || 0);
+            } else if (filter === 'tod') {
+                // Aggregate by Hour (0-23)
+                const summary = processed.reduce((acc, row) => {
+                    const hr = row.dateObj.getHours();
+                    acc[hr] = (acc[hr] || 0) + row.entries;
+                    return acc;
+                }, {});
+                labels = Array.from({length: 24}, (_, i) => `${i}:00`);
+                values = Array.from({length: 24}, (_, i) => summary[i] || 0);
             } else {
-                // Simple Monthly Aggregation
                 const months = {};
                 processed.forEach(r => {
                     const m = r.dateObj.toLocaleString('default', { month: 'short' });
