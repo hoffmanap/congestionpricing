@@ -1,60 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>MTA Congestion Relief Dashboard</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-<body class="bg-gray-50 p-8">
-    <div class="max-w-4xl mx-auto">
-        <h1 class="text-2xl font-bold mb-4">MTA Congestion Relief Data</h1>
-        <div id="status" class="mb-4 text-sm text-gray-600">Connecting to API...</div>
-        <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-            <canvas id="mtaChart"></canvas>
-        </div>
-    </div>
+name: Deploy Dashboard
+on:
+  push:
+    branches:
+      - main
 
-    <script>
-        // Placeholder for GitHub Actions injection
-        const API_KEY = "REPLACE_WITH_SECRET_TOKEN"; 
-        const API_URL = "https://data.ny.gov/resource/t6yz-b64h.json?$limit=100";
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
 
-        async function loadData() {
-            try {
-                const response = await fetch(API_URL, {
-                    method: 'GET',
-                    headers: {
-                        'X-App-Token': API_KEY,
-                        'Accept': 'application/json'
-                    }
-                });
+      - name: Inject Secret
+        shell: bash
+        env:
+          API_KEY_SECRET: ${{ secrets.API_KEY }}
+        run: |
+          sed -i "s/REPLACE_WITH_SECRET_TOKEN/$API_KEY_SECRET/g" index.html
 
-                if (!response.ok) throw new Error(`HTTP ${response.status}: Failed to reach API.`);
-                
-                const data = await response.json();
-                document.getElementById('status').textContent = `Loaded ${data.length} records.`;
-                render(data);
-            } catch (err) {
-                document.getElementById('status').innerHTML = `<span class="text-red-600">${err.message}</span>`;
-            }
-        }
-
-        function render(data) {
-            const ctx = document.getElementById('mtaChart').getContext('2d');
-            // Assuming 'vehicle_class' and 'crz_entries' exist based on typical MTA datasets
-            const labels = data.map(d => d.vehicle_class || "N/A");
-            const values = data.map(d => parseFloat(d.crz_entries || 0));
-
-            new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: labels,
-                    datasets: [{ label: 'Entries', data: values, backgroundColor: '#2563eb' }]
-                }
-            });
-        }
-        loadData();
-    </script>
-</body>
-</html>
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
