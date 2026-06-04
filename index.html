@@ -2,69 +2,65 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>MTA Congestion Relief Analytics</title>
+    <title>MTA Mobility Benchmark Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body class="bg-gray-50 p-8">
     <div class="max-w-6xl mx-auto">
-        <header class="mb-8">
-            <h1 class="text-3xl font-bold text-gray-900">MTA Congestion Relief Zone</h1>
-            <select id="timeFilter" onchange="render()" class="mt-4 p-2 border rounded shadow-sm">
-                <option value="dow">Average by Day of Week</option>
-                <option value="tod">Time of Day (Hourly)</option>
-            </select>
-        </header>
+        <h1 class="text-3xl font-bold mb-6">Congestion Zone: Hourly Benchmarking</h1>
         <div class="bg-white p-6 rounded-xl shadow-sm border">
             <canvas id="mtaChart" height="100"></canvas>
         </div>
     </div>
 
     <script>
-        let cachedData = [];
-
         async function init() {
             const res = await fetch('./data.json');
-            cachedData = await res.json();
-            render();
+            const data = await res.json();
+            render(data);
         }
 
-        function render() {
-            const filter = document.getElementById('timeFilter').value;
+        function render(data) {
             const ctx = document.getElementById('mtaChart').getContext('2d');
+            const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
             
-            // Map data using correct field names from your snippet
-            const processed = cachedData.map(d => ({
-                dateObj: new Date(d.toll_hour), // Corrected field
-                entries: parseInt(d.crz_entries) || 0
+            // 1. Group data by Day of Week and Hour
+            const dailyData = {};
+            data.forEach(row => {
+                const date = new Date(row.toll_hour);
+                const day = row.day_of_week;
+                const hour = date.getHours();
+                if (!dailyData[day]) dailyData[day] = new Array(24).fill(0);
+                dailyData[day][hour] += parseInt(row.crz_entries) || 0;
+            });
+
+            // 2. Prepare datasets
+            const colors = ['#f87171', '#fb923c', '#fbbf24', '#4ade80', '#22d3ee', '#818cf8', '#e879f9'];
+            const datasets = days.map((day, i) => ({
+                label: day,
+                data: dailyData[day] || new Array(24).fill(0),
+                borderColor: colors[i],
+                fill: false,
+                tension: 0.3
             }));
 
-            let labels, values;
+            // 3. Add Benchmark (Most Recent Day found in data)
+            const mostRecentDate = new Date(Math.max(...data.map(d => new Date(d.toll_hour))));
+            const recentDayName = days[mostRecentDate.getDay()];
+            datasets.push({
+                label: `Benchmark: ${recentDayName} (Most Recent)`,
+                data: dailyData[recentDayName],
+                borderColor: '#000000',
+                borderWidth: 4,
+                borderDash: [5, 5],
+                fill: false
+            });
 
-            if (filter === 'dow') {
-                const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-                const summary = processed.reduce((acc, row) => {
-                    const d = days[row.dateObj.getDay()];
-                    acc[d] = (acc[d] || 0) + row.entries;
-                    return acc;
-                }, {});
-                labels = days;
-                values = days.map(d => summary[d] || 0);
-            } else {
-                // Aggregating by hour (0-23)
-                const summary = processed.reduce((acc, row) => {
-                    const hr = row.dateObj.getHours();
-                    acc[hr] = (acc[hr] || 0) + row.entries;
-                    return acc;
-                }, {});
-                labels = Array.from({length: 24}, (_, i) => `${i}:00`);
-                values = Array.from({length: 24}, (_, i) => summary[i] || 0);
-            }
-
-            if (window.myChart instanceof Chart) window.myChart.destroy();
-            window.myChart = new Chart(ctx, {
-                type: 'bar',
-                data: { labels, datasets: [{ label: 'Total CRZ Entries', data: values, backgroundColor: '#2563eb' }] }
+            new Chart(ctx, {
+                type: 'line',
+                data: { labels: Array.from({length: 24}, (_, i) => `${i}:00`), datasets },
+                options: { responsive: true, scales: { y: { beginAtZero: true } } }
             });
         }
         init();
