@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8"><!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MTA Mobility Benchmark Dashboard</title>
@@ -65,15 +68,17 @@
             const m = document.getElementById('monthFilter').value;
             const r = document.getElementById('regionFilter').value;
             
+            if (!y || !m || !r) return;
+
             const filtered = cachedData.filter(d => 
-                String(d.year) === y && 
+                String(d.year) === String(y) && 
                 d.month === m && 
                 d.detection_region === r
             );
 
             const ctx = document.getElementById('mtaChart').getContext('2d');
             const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-            const colors = ['#94a3b8', '#94a3b8', '#94a3b8', '#94a3b8', '#94a3b8', '#94a3b8', '#94a3b8'];
+            const colors = ['#f87171', '#fb923c', '#fbbf24', '#4ade80', '#22d3ee', '#818cf8', '#e879f9'];
 
             // Find most recent date from filtered set
             const dates = [...new Set(filtered.map(r => r.date_str))].sort();
