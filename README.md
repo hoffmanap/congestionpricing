@@ -3,10 +3,10 @@ This project provides a data-driven visualization platform for analyzing traffic
 
 **Live Dashboard**
 View the live visualization here:
-_https://hoffmanap.github.io/congestionpricing/_
+**__https://hoffmanap.github.io/congestionpricing/__**
 
 **Features**
-Automated Data Pipeline: Uses GitHub Actions to daily fetch raw mobility data from the NY Data Portal.
+**Automated Data Pipeline**: Uses GitHub Actions to daily fetch raw mobility data from the NY Data Portal.
 
 **Server-Side Aggregation**: A Python-based summarization engine reduces 50,000+ raw records into a lightweight summary.json file, ensuring the dashboard loads instantly.
 
