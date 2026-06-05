@@ -2,25 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>MTA Mobility Dashboard</title>
+    <title>MTA Mobility Benchmark Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body class="bg-gray-50 p-8">
     <div class="max-w-6xl mx-auto">
         <h1 class="text-3xl font-bold mb-6">Congestion Zone: Hourly Benchmarking</h1>
+        <div class="flex gap-4 mb-6">
+            <select id="regionFilter" onchange="render()" class="p-2 border rounded shadow-sm"></select>
+        </div>
         <div class="bg-white p-6 rounded-xl shadow-sm border">
             <canvas id="mtaChart" height="100"></canvas>
         </div>
     </div>
+
     <script>
+        let cachedData = [];
+
         async function init() {
             const res = await fetch('./summary.json');
-            const data = await res.json();
+            cachedData = await res.json();
+            
+            // Populate region filter
+            const regions = [...new Set(cachedData.map(r => r.detection_region))];
+            const select = document.getElementById('regionFilter');
+            regions.forEach(reg => {
+                const opt = document.createElement('option');
+                opt.value = reg; opt.textContent = reg;
+                select.appendChild(opt);
+            });
+            render();
+        }
+
+        function render() {
+            const region = document.getElementById('regionFilter').value;
+            const data = cachedData.filter(r => r.detection_region === region);
             const ctx = document.getElementById('mtaChart').getContext('2d');
             const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
             const colors = ['#f87171', '#fb923c', '#fbbf24', '#4ade80', '#22d3ee', '#818cf8', '#e879f9'];
-            
+
+            // Find most recent date for benchmark
+            const mostRecentDate = [...new Set(cachedData.map(r => r.date_str))].sort().reverse()[0];
+
             const datasets = days.map((day, i) => ({
                 label: day,
                 data: Array.from({length: 24}, (_, h) => {
@@ -31,7 +55,20 @@
                 fill: false, tension: 0.3
             }));
 
-            new Chart(ctx, {
+            // Add Benchmark: Most Recent Day
+            const recentDateObj = new Date(mostRecentDate);
+            const recentDayName = days[recentDateObj.getDay()];
+            datasets.push({
+                label: `Benchmark: ${mostRecentDate}`,
+                data: Array.from({length: 24}, (_, h) => {
+                    const row = data.find(r => r.date_str === mostRecentDate && r.hour === h);
+                    return row ? row.crz_entries : 0;
+                }),
+                borderColor: '#000000', borderWidth: 4, borderDash: [5, 5], fill: false
+            });
+
+            if (window.myChart instanceof Chart) window.myChart.destroy();
+            window.myChart = new Chart(ctx, {
                 type: 'line',
                 data: { labels: Array.from({length: 24}, (_, i) => `${i}:00`), datasets },
                 options: { responsive: true }
