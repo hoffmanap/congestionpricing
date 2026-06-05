@@ -10,8 +10,11 @@
     <div class="max-w-6xl mx-auto">
         <h1 class="text-3xl font-bold mb-6 text-gray-900">Congestion Zone: Hourly Benchmarking</h1>
         
-        <div class="flex gap-4 mb-6">
-            <select id="regionFilter" onchange="render()" class="p-2 border rounded shadow-sm w-64"></select>
+        <!-- Filters -->
+        <div class="flex gap-4 mb-6 bg-white p-4 rounded-lg shadow-sm border">
+            <select id="yearFilter" onchange="updateMonthOptions()" class="p-2 border rounded"></select>
+            <select id="monthFilter" onchange="updateRegionOptions()" class="p-2 border rounded"></select>
+            <select id="regionFilter" onchange="render()" class="p-2 border rounded"></select>
         </div>
 
         <div class="bg-white p-6 rounded-xl shadow-sm border">
@@ -23,36 +26,49 @@
         let cachedData = [];
 
         async function init() {
-            try {
-                const res = await fetch('./summary.json');
-                cachedData = await res.json();
-                
-                // Populate region filter dynamically
-                const regionSelect = document.getElementById('regionFilter');
-                const regions = [...new Set(cachedData.map(r => r.detection_region))].sort();
-                regions.forEach(reg => {
-                    const opt = document.createElement('option');
-                    opt.value = reg; opt.textContent = reg;
-                    regionSelect.appendChild(opt);
-                });
-                render();
-            } catch (err) {
-                console.error("Failed to load data:", err);
-            }
+            const res = await fetch('./summary.json');
+            cachedData = await res.json();
+            
+            // Populate Year
+            const years = [...new Set(cachedData.map(r => r.year))].sort((a,b) => b-a);
+            const yearSel = document.getElementById('yearFilter');
+            years.forEach(y => yearSel.add(new Option(y, y)));
+            
+            updateMonthOptions();
+        }
+
+        function updateMonthOptions() {
+            const y = document.getElementById('yearFilter').value;
+            const months = [...new Set(cachedData.filter(r => r.year == y).map(r => r.month))];
+            const sel = document.getElementById('monthFilter');
+            sel.innerHTML = '';
+            months.forEach(m => sel.add(new Option(m, m)));
+            updateRegionOptions();
+        }
+
+        function updateRegionOptions() {
+            const y = document.getElementById('yearFilter').value;
+            const m = document.getElementById('monthFilter').value;
+            const regions = [...new Set(cachedData.filter(r => r.year == y && r.month == m).map(r => r.detection_region))];
+            const sel = document.getElementById('regionFilter');
+            sel.innerHTML = '';
+            regions.forEach(r => sel.add(new Option(r, r)));
+            render();
         }
 
         function render() {
-            const region = document.getElementById('regionFilter').value;
-            if (!region) return;
-
-            const filtered = cachedData.filter(r => r.detection_region === region);
+            const y = document.getElementById('yearFilter').value;
+            const m = document.getElementById('monthFilter').value;
+            const r = document.getElementById('regionFilter').value;
+            
+            const filtered = cachedData.filter(d => d.year == y && d.month == m && d.detection_region == r);
             const ctx = document.getElementById('mtaChart').getContext('2d');
             const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-            const colors = ['#94a3b8', '#94a3b8', '#94a3b8', '#94a3b8', '#94a3b8', '#94a3b8', '#94a3b8']; // Muted for baseline
+            const colors = ['#94a3b8', '#94a3b8', '#94a3b8', '#94a3b8', '#94a3b8', '#94a3b8', '#94a3b8'];
 
-            // Get benchmark date (most recent in data)
+            // Find most recent date from filtered set
             const dates = [...new Set(filtered.map(r => r.date_str))].sort();
-            const benchmarkDate = dates[dates.length - 1];
+            const benchmarkDate = dates.length > 0 ? dates[dates.length - 1] : "No Data";
 
             const datasets = days.map((day, i) => ({
                 label: day,
@@ -60,12 +76,10 @@
                     const row = filtered.find(r => r.day === day && r.hour === h);
                     return row ? row.crz_entries : 0;
                 }),
-                borderColor: colors[i],
-                borderWidth: 1,
-                fill: false, tension: 0.3
+                borderColor: colors[i], borderWidth: 1, fill: false, tension: 0.3
             }));
 
-            // Add Benchmark: Most Recent Day (Highlighted)
+            // Add Benchmark
             datasets.push({
                 label: `Benchmark: ${benchmarkDate}`,
                 data: Array.from({length: 24}, (_, h) => {
