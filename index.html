@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MTA Mobility Benchmark Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -10,15 +11,14 @@
     <div class="max-w-6xl mx-auto">
         <h1 class="text-3xl font-bold mb-6 text-gray-900">Congestion Zone: Hourly Benchmarking</h1>
         
-        <!-- Filters -->
-        <div class="flex gap-4 mb-6 bg-white p-4 rounded-lg shadow-sm border">
+        <div class="flex gap-4 mb-6 bg-white p-4 rounded-lg shadow-sm border flex-wrap">
             <select id="yearFilter" onchange="updateMonthOptions()" class="p-2 border rounded"></select>
             <select id="monthFilter" onchange="updateRegionOptions()" class="p-2 border rounded"></select>
             <select id="regionFilter" onchange="render()" class="p-2 border rounded"></select>
         </div>
 
         <div class="bg-white p-6 rounded-xl shadow-sm border">
-            <canvas id="mtaChart"></canvas>
+            <canvas id="mtaChart" height="100"></canvas>
         </div>
     </div>
 
@@ -26,20 +26,24 @@
         let cachedData = [];
 
         async function init() {
-            const res = await fetch('./summary.json');
-            cachedData = await res.json();
-            
-            // Populate Year
-            const years = [...new Set(cachedData.map(r => r.year))].sort((a,b) => b-a);
-            const yearSel = document.getElementById('yearFilter');
-            years.forEach(y => yearSel.add(new Option(y, y)));
-            
-            updateMonthOptions();
+            try {
+                const res = await fetch('./summary.json');
+                cachedData = await res.json();
+                
+                // Populate Year
+                const years = [...new Set(cachedData.map(r => String(r.year)))].sort((a,b) => b-a);
+                const yearSel = document.getElementById('yearFilter');
+                years.forEach(y => yearSel.add(new Option(y, y)));
+                
+                updateMonthOptions();
+            } catch (err) {
+                console.error("Initialization failed:", err);
+            }
         }
 
         function updateMonthOptions() {
             const y = document.getElementById('yearFilter').value;
-            const months = [...new Set(cachedData.filter(r => r.year == y).map(r => r.month))];
+            const months = [...new Set(cachedData.filter(r => String(r.year) === y).map(r => r.month))];
             const sel = document.getElementById('monthFilter');
             sel.innerHTML = '';
             months.forEach(m => sel.add(new Option(m, m)));
@@ -49,7 +53,7 @@
         function updateRegionOptions() {
             const y = document.getElementById('yearFilter').value;
             const m = document.getElementById('monthFilter').value;
-            const regions = [...new Set(cachedData.filter(r => r.year == y && r.month == m).map(r => r.detection_region))];
+            const regions = [...new Set(cachedData.filter(r => String(r.year) === y && r.month === m).map(r => r.detection_region))];
             const sel = document.getElementById('regionFilter');
             sel.innerHTML = '';
             regions.forEach(r => sel.add(new Option(r, r)));
@@ -61,7 +65,12 @@
             const m = document.getElementById('monthFilter').value;
             const r = document.getElementById('regionFilter').value;
             
-            const filtered = cachedData.filter(d => d.year == y && d.month == m && d.detection_region == r);
+            const filtered = cachedData.filter(d => 
+                String(d.year) === y && 
+                d.month === m && 
+                d.detection_region === r
+            );
+
             const ctx = document.getElementById('mtaChart').getContext('2d');
             const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
             const colors = ['#94a3b8', '#94a3b8', '#94a3b8', '#94a3b8', '#94a3b8', '#94a3b8', '#94a3b8'];
