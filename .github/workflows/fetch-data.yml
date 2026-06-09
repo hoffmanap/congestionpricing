@@ -1,42 +1,16 @@
-name: Fetch and Summarize MTA Data
-on:
-  schedule:
-    - cron: '0 0 * * *'
-  workflow_dispatch:
-jobs:
-  fetch:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write # This is the crucial part
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }} # Ensure the token is passed
-
-      - name: Setup Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.9'
-
-      - name: Install dependencies
-        run: pip install pandas
-
-      - name: Fetch and Summarize
-        run: |
-          curl -H "X-App-Token: ${{ secrets.API_KEY }}" \
-          'https://data.ny.gov/resource/t6yz-b64h.json?$limit=50000' > data.json
-          python summarize.py
-
-      - name: Commit and Push
+- name: Commit and Push
         run: |
           git config user.name "GitHub Action"
           git config user.email "action@github.com"
-          # Only add the summary, not the raw data
-          git add summary.json
-          # Commit only if there are changes
-          if git diff --quiet && git diff --cached --quiet; then
+          
+          # Stage both the generated summary and the raw data
+          git add summary.json data.json
+          
+          # Commit only if there are actual changes to these files
+          # 'git diff-index' returns 0 if no changes, 1 if changes exist
+          if git diff-index --quiet HEAD --; then
             echo "No changes to commit."
           else
-            git commit -m "Automated update of summary.json"
+            git commit -m "Automated update: $(date)"
             git push
           fi
