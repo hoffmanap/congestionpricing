@@ -23,12 +23,12 @@ jobs:
           curl -H "X-App-Token: ${{ secrets.API_KEY }}" \
           'https://data.ny.gov/resource/t6yz-b64h.json?$limit=50000' > data.json
           python summarize.py
-     - name: Commit and Push
+      - name: Commit and Push
         run: |
           git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
           
-          # Force add the summary file (overriding .gitignore just for this action)
+          # Force add the summary file
           git add -f summary.json
           
           # Check for changes
