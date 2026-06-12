@@ -28,13 +28,13 @@ jobs:
           git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
           
-          # Force add the summary file
-          git add -f summary.json
+          # Add the historical archive file
+          git add -f data_archive.json
           
-          # Check for changes
+          # Check for changes and push
           if git diff --staged --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "Automated update of summary.json"
+            git commit -m "Automated update of data_archive.json"
             git push origin main
           fi
