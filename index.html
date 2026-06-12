@@ -30,7 +30,7 @@
 
         async function init() {
             try {
-                // Fetch the new historical archive
+                // Fetch the historical archive
                 const res = await fetch('./data_archive.json');
                 cachedData = await res.json();
                 
@@ -98,7 +98,12 @@
                 datasets.push({
                     label: `Benchmark: ${bDate}`,
                     data: Array.from({length: 24}, (_, h) => {
-                        const row = cachedData.find(r => r.date_str === bDate && r.hour === h && r.detection_region === r);
+                        // Searching 'cachedData' (the whole archive) to find the benchmark
+                        const row = cachedData.find(item => 
+                            item.date_str === bDate && 
+                            item.hour === h && 
+                            item.detection_region === r
+                        );
                         return row ? row.crz_entries : 0;
                     }),
                     borderColor: '#e11d48', borderWidth: 3, borderDash: [5, 5], fill: false
