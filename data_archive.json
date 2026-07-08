@@ -182698,5 +182698,7313 @@
         "detection_region": "West Side Highway",
         "date_str": "2026-06-24",
         "crz_entries": 1158
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 0,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-26",
+        "crz_entries": 3461
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 0,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-26",
+        "crz_entries": 2957
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 0,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-26",
+        "crz_entries": 1313
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 0,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-26",
+        "crz_entries": 2145
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 0,
+        "detection_region": "Queens",
+        "date_str": "2026-06-26",
+        "crz_entries": 1836
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 0,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-26",
+        "crz_entries": 1234
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 0,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-26",
+        "crz_entries": 847
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 1,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-26",
+        "crz_entries": 2777
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 1,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-26",
+        "crz_entries": 1940
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 1,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-26",
+        "crz_entries": 836
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 1,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-26",
+        "crz_entries": 1654
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 1,
+        "detection_region": "Queens",
+        "date_str": "2026-06-26",
+        "crz_entries": 1158
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 1,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-26",
+        "crz_entries": 836
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 1,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-26",
+        "crz_entries": 594
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 2,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-26",
+        "crz_entries": 1806
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 2,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-26",
+        "crz_entries": 1501
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 2,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-26",
+        "crz_entries": 564
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 2,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-26",
+        "crz_entries": 1282
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 2,
+        "detection_region": "Queens",
+        "date_str": "2026-06-26",
+        "crz_entries": 874
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 2,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-26",
+        "crz_entries": 522
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 2,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-26",
+        "crz_entries": 430
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 3,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-26",
+        "crz_entries": 1594
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 3,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-26",
+        "crz_entries": 1134
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 3,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-26",
+        "crz_entries": 516
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 3,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-26",
+        "crz_entries": 1139
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 3,
+        "detection_region": "Queens",
+        "date_str": "2026-06-26",
+        "crz_entries": 862
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 3,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-26",
+        "crz_entries": 374
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 3,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-26",
+        "crz_entries": 369
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 4,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-26",
+        "crz_entries": 2611
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 4,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-26",
+        "crz_entries": 1337
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 4,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-26",
+        "crz_entries": 804
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 4,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-26",
+        "crz_entries": 1973
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 4,
+        "detection_region": "Queens",
+        "date_str": "2026-06-26",
+        "crz_entries": 1487
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 4,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-26",
+        "crz_entries": 381
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 4,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-26",
+        "crz_entries": 636
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 5,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-26",
+        "crz_entries": 3245
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 5,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-26",
+        "crz_entries": 1522
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 5,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-26",
+        "crz_entries": 1426
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 5,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-26",
+        "crz_entries": 4042
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 5,
+        "detection_region": "Queens",
+        "date_str": "2026-06-26",
+        "crz_entries": 3005
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 5,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-26",
+        "crz_entries": 459
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 5,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-26",
+        "crz_entries": 1212
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 6,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-26",
+        "crz_entries": 6018
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 6,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-26",
+        "crz_entries": 2446
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 6,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-26",
+        "crz_entries": 2486
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 6,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-26",
+        "crz_entries": 5879
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 6,
+        "detection_region": "Queens",
+        "date_str": "2026-06-26",
+        "crz_entries": 5051
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 6,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-26",
+        "crz_entries": 867
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 6,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-26",
+        "crz_entries": 2506
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 7,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-26",
+        "crz_entries": 6801
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 7,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-26",
+        "crz_entries": 3123
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 7,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-26",
+        "crz_entries": 2820
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 7,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-26",
+        "crz_entries": 5501
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 7,
+        "detection_region": "Queens",
+        "date_str": "2026-06-26",
+        "crz_entries": 5705
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 7,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-26",
+        "crz_entries": 1436
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 7,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-26",
+        "crz_entries": 3055
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 8,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-26",
+        "crz_entries": 6940
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 8,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-26",
+        "crz_entries": 3321
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 8,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-26",
+        "crz_entries": 2919
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 8,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-26",
+        "crz_entries": 5226
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 8,
+        "detection_region": "Queens",
+        "date_str": "2026-06-26",
+        "crz_entries": 5637
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 8,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-26",
+        "crz_entries": 1745
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 8,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-26",
+        "crz_entries": 3198
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 9,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-26",
+        "crz_entries": 6573
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 9,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-26",
+        "crz_entries": 3403
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 9,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-26",
+        "crz_entries": 3034
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 9,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-26",
+        "crz_entries": 4580
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 9,
+        "detection_region": "Queens",
+        "date_str": "2026-06-26",
+        "crz_entries": 5071
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 9,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-26",
+        "crz_entries": 1921
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 9,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-26",
+        "crz_entries": 2634
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 10,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-26",
+        "crz_entries": 5990
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 10,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-26",
+        "crz_entries": 3442
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 10,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-26",
+        "crz_entries": 2587
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 10,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-26",
+        "crz_entries": 4562
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 10,
+        "detection_region": "Queens",
+        "date_str": "2026-06-26",
+        "crz_entries": 4382
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 10,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-26",
+        "crz_entries": 1972
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 10,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-26",
+        "crz_entries": 2260
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 11,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-26",
+        "crz_entries": 5873
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 11,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-26",
+        "crz_entries": 3469
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 11,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-26",
+        "crz_entries": 3169
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 11,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-26",
+        "crz_entries": 4580
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 11,
+        "detection_region": "Queens",
+        "date_str": "2026-06-26",
+        "crz_entries": 4422
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 11,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-26",
+        "crz_entries": 1897
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 11,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-26",
+        "crz_entries": 2060
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 12,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-26",
+        "crz_entries": 5504
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 12,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-26",
+        "crz_entries": 3658
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 12,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-26",
+        "crz_entries": 3084
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 12,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-26",
+        "crz_entries": 3955
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 12,
+        "detection_region": "Queens",
+        "date_str": "2026-06-26",
+        "crz_entries": 4349
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 12,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-26",
+        "crz_entries": 1849
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 12,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-26",
+        "crz_entries": 1857
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 13,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-26",
+        "crz_entries": 5595
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 13,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-26",
+        "crz_entries": 3331
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 13,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-26",
+        "crz_entries": 2956
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 13,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-26",
+        "crz_entries": 4138
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 13,
+        "detection_region": "Queens",
+        "date_str": "2026-06-26",
+        "crz_entries": 4510
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 13,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-26",
+        "crz_entries": 1858
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 13,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-26",
+        "crz_entries": 1919
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 14,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-26",
+        "crz_entries": 5845
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 14,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-26",
+        "crz_entries": 3605
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 14,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-26",
+        "crz_entries": 3003
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 14,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-26",
+        "crz_entries": 4209
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 14,
+        "detection_region": "Queens",
+        "date_str": "2026-06-26",
+        "crz_entries": 4792
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 14,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-26",
+        "crz_entries": 1933
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 14,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-26",
+        "crz_entries": 2310
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 15,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-26",
+        "crz_entries": 5751
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 15,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-26",
+        "crz_entries": 4062
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 15,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-26",
+        "crz_entries": 2575
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 15,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-26",
+        "crz_entries": 4090
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 15,
+        "detection_region": "Queens",
+        "date_str": "2026-06-26",
+        "crz_entries": 4801
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 15,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-26",
+        "crz_entries": 1990
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 15,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-26",
+        "crz_entries": 2140
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 16,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-26",
+        "crz_entries": 5826
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 16,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-26",
+        "crz_entries": 4213
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 16,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-26",
+        "crz_entries": 2233
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 16,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-26",
+        "crz_entries": 4052
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 16,
+        "detection_region": "Queens",
+        "date_str": "2026-06-26",
+        "crz_entries": 4847
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 16,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-26",
+        "crz_entries": 2020
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 16,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-26",
+        "crz_entries": 2451
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 17,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-26",
+        "crz_entries": 6543
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 17,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-26",
+        "crz_entries": 4722
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 17,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-26",
+        "crz_entries": 1705
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 17,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-26",
+        "crz_entries": 3821
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 17,
+        "detection_region": "Queens",
+        "date_str": "2026-06-26",
+        "crz_entries": 4899
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 17,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-26",
+        "crz_entries": 2253
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 17,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-26",
+        "crz_entries": 2617
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 18,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-26",
+        "crz_entries": 6446
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 18,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-26",
+        "crz_entries": 4722
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 18,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-26",
+        "crz_entries": 2214
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 18,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-26",
+        "crz_entries": 4142
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 18,
+        "detection_region": "Queens",
+        "date_str": "2026-06-26",
+        "crz_entries": 4648
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 18,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-26",
+        "crz_entries": 2620
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 18,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-26",
+        "crz_entries": 3072
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 19,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-26",
+        "crz_entries": 6151
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 19,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-26",
+        "crz_entries": 4047
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 19,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-26",
+        "crz_entries": 3225
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 19,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-26",
+        "crz_entries": 3845
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 19,
+        "detection_region": "Queens",
+        "date_str": "2026-06-26",
+        "crz_entries": 4202
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 19,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-26",
+        "crz_entries": 2342
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 19,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-26",
+        "crz_entries": 2489
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 20,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-26",
+        "crz_entries": 5737
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 20,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-26",
+        "crz_entries": 3451
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 20,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-26",
+        "crz_entries": 2831
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 20,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-26",
+        "crz_entries": 3864
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 20,
+        "detection_region": "Queens",
+        "date_str": "2026-06-26",
+        "crz_entries": 3637
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 20,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-26",
+        "crz_entries": 1810
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 20,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-26",
+        "crz_entries": 1856
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 21,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-26",
+        "crz_entries": 5647
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 21,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-26",
+        "crz_entries": 3698
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 21,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-26",
+        "crz_entries": 2492
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 21,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-26",
+        "crz_entries": 3652
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 21,
+        "detection_region": "Queens",
+        "date_str": "2026-06-26",
+        "crz_entries": 3204
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 21,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-26",
+        "crz_entries": 1675
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 21,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-26",
+        "crz_entries": 1828
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 22,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-26",
+        "crz_entries": 5506
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 22,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-26",
+        "crz_entries": 3599
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 22,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-26",
+        "crz_entries": 2560
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 22,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-26",
+        "crz_entries": 3540
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 22,
+        "detection_region": "Queens",
+        "date_str": "2026-06-26",
+        "crz_entries": 3129
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 22,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-26",
+        "crz_entries": 1711
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 22,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-26",
+        "crz_entries": 1826
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 23,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-26",
+        "crz_entries": 5217
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 23,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-26",
+        "crz_entries": 3435
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 23,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-26",
+        "crz_entries": 2452
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 23,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-26",
+        "crz_entries": 3245
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 23,
+        "detection_region": "Queens",
+        "date_str": "2026-06-26",
+        "crz_entries": 2792
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 23,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-26",
+        "crz_entries": 1543
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Friday",
+        "hour": 23,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-26",
+        "crz_entries": 1539
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 0,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-27",
+        "crz_entries": 4720
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 0,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-27",
+        "crz_entries": 2921
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 0,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-27",
+        "crz_entries": 1759
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 0,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-27",
+        "crz_entries": 2587
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 0,
+        "detection_region": "Queens",
+        "date_str": "2026-06-27",
+        "crz_entries": 2267
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 0,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-27",
+        "crz_entries": 1237
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 0,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-27",
+        "crz_entries": 1116
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 1,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-27",
+        "crz_entries": 4304
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 1,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-27",
+        "crz_entries": 2679
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 1,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-27",
+        "crz_entries": 1427
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 1,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-27",
+        "crz_entries": 2185
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 1,
+        "detection_region": "Queens",
+        "date_str": "2026-06-27",
+        "crz_entries": 1705
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 1,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-27",
+        "crz_entries": 1091
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 1,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-27",
+        "crz_entries": 875
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 2,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-27",
+        "crz_entries": 3204
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 2,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-27",
+        "crz_entries": 2157
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 2,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-27",
+        "crz_entries": 1011
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 2,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-27",
+        "crz_entries": 1727
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 2,
+        "detection_region": "Queens",
+        "date_str": "2026-06-27",
+        "crz_entries": 1282
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 2,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-27",
+        "crz_entries": 883
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 2,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-27",
+        "crz_entries": 654
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 3,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-27",
+        "crz_entries": 2446
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 3,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-27",
+        "crz_entries": 1714
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 3,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-27",
+        "crz_entries": 829
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 3,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-27",
+        "crz_entries": 1430
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 3,
+        "detection_region": "Queens",
+        "date_str": "2026-06-27",
+        "crz_entries": 1167
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 3,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-27",
+        "crz_entries": 737
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 3,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-27",
+        "crz_entries": 571
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 4,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-27",
+        "crz_entries": 2551
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 4,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-27",
+        "crz_entries": 1565
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 4,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-27",
+        "crz_entries": 794
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 4,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-27",
+        "crz_entries": 1574
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 4,
+        "detection_region": "Queens",
+        "date_str": "2026-06-27",
+        "crz_entries": 1341
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 4,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-27",
+        "crz_entries": 597
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 4,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-27",
+        "crz_entries": 647
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 5,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-27",
+        "crz_entries": 3170
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 5,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-27",
+        "crz_entries": 1547
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 5,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-27",
+        "crz_entries": 1052
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 5,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-27",
+        "crz_entries": 2332
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 5,
+        "detection_region": "Queens",
+        "date_str": "2026-06-27",
+        "crz_entries": 2065
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 5,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-27",
+        "crz_entries": 496
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 5,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-27",
+        "crz_entries": 840
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 6,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-27",
+        "crz_entries": 4432
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 6,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-27",
+        "crz_entries": 2145
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 6,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-27",
+        "crz_entries": 1602
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 6,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-27",
+        "crz_entries": 3336
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 6,
+        "detection_region": "Queens",
+        "date_str": "2026-06-27",
+        "crz_entries": 2903
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 6,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-27",
+        "crz_entries": 645
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 6,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-27",
+        "crz_entries": 1398
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 7,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-27",
+        "crz_entries": 4961
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 7,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-27",
+        "crz_entries": 2861
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 7,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-27",
+        "crz_entries": 1757
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 7,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-27",
+        "crz_entries": 3580
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 7,
+        "detection_region": "Queens",
+        "date_str": "2026-06-27",
+        "crz_entries": 3219
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 7,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-27",
+        "crz_entries": 915
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 7,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-27",
+        "crz_entries": 1412
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 8,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-27",
+        "crz_entries": 5503
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 8,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-27",
+        "crz_entries": 3163
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 8,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-27",
+        "crz_entries": 2042
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 8,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-27",
+        "crz_entries": 3886
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 8,
+        "detection_region": "Queens",
+        "date_str": "2026-06-27",
+        "crz_entries": 3660
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 8,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-27",
+        "crz_entries": 1321
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 8,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-27",
+        "crz_entries": 1667
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 9,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-27",
+        "crz_entries": 5340
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 9,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-27",
+        "crz_entries": 3168
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 9,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-27",
+        "crz_entries": 2442
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 9,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-27",
+        "crz_entries": 3964
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 9,
+        "detection_region": "Queens",
+        "date_str": "2026-06-27",
+        "crz_entries": 3855
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 9,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-27",
+        "crz_entries": 1547
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 9,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-27",
+        "crz_entries": 1776
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 10,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-27",
+        "crz_entries": 5959
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 10,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-27",
+        "crz_entries": 3575
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 10,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-27",
+        "crz_entries": 2636
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 10,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-27",
+        "crz_entries": 4067
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 10,
+        "detection_region": "Queens",
+        "date_str": "2026-06-27",
+        "crz_entries": 4063
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 10,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-27",
+        "crz_entries": 1632
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 10,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-27",
+        "crz_entries": 1912
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 11,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-27",
+        "crz_entries": 5756
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 11,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-27",
+        "crz_entries": 3684
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 11,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-27",
+        "crz_entries": 2629
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 11,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-27",
+        "crz_entries": 4211
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 11,
+        "detection_region": "Queens",
+        "date_str": "2026-06-27",
+        "crz_entries": 4146
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 11,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-27",
+        "crz_entries": 1784
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 11,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-27",
+        "crz_entries": 2079
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 12,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-27",
+        "crz_entries": 5966
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 12,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-27",
+        "crz_entries": 3170
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 12,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-27",
+        "crz_entries": 2940
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 12,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-27",
+        "crz_entries": 3993
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 12,
+        "detection_region": "Queens",
+        "date_str": "2026-06-27",
+        "crz_entries": 4072
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 12,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-27",
+        "crz_entries": 2019
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 12,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-27",
+        "crz_entries": 2339
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 13,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-27",
+        "crz_entries": 5928
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 13,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-27",
+        "crz_entries": 2950
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 13,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-27",
+        "crz_entries": 3051
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 13,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-27",
+        "crz_entries": 4036
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 13,
+        "detection_region": "Queens",
+        "date_str": "2026-06-27",
+        "crz_entries": 4157
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 13,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-27",
+        "crz_entries": 2180
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 13,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-27",
+        "crz_entries": 2388
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 14,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-27",
+        "crz_entries": 5772
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 14,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-27",
+        "crz_entries": 2800
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 14,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-27",
+        "crz_entries": 2854
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 14,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-27",
+        "crz_entries": 3935
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 14,
+        "detection_region": "Queens",
+        "date_str": "2026-06-27",
+        "crz_entries": 4302
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 14,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-27",
+        "crz_entries": 2160
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 14,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-27",
+        "crz_entries": 2308
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 15,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-27",
+        "crz_entries": 5747
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 15,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-27",
+        "crz_entries": 3144
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 15,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-27",
+        "crz_entries": 2395
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 15,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-27",
+        "crz_entries": 3923
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 15,
+        "detection_region": "Queens",
+        "date_str": "2026-06-27",
+        "crz_entries": 4474
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 15,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-27",
+        "crz_entries": 2050
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 15,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-27",
+        "crz_entries": 2358
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 16,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-27",
+        "crz_entries": 5829
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 16,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-27",
+        "crz_entries": 3397
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 16,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-27",
+        "crz_entries": 1832
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 16,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-27",
+        "crz_entries": 3923
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 16,
+        "detection_region": "Queens",
+        "date_str": "2026-06-27",
+        "crz_entries": 4002
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 16,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-27",
+        "crz_entries": 2237
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 16,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-27",
+        "crz_entries": 2665
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 17,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-27",
+        "crz_entries": 6186
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 17,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-27",
+        "crz_entries": 3553
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 17,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-27",
+        "crz_entries": 1712
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 17,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-27",
+        "crz_entries": 3984
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 17,
+        "detection_region": "Queens",
+        "date_str": "2026-06-27",
+        "crz_entries": 3939
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 17,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-27",
+        "crz_entries": 2493
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 17,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-27",
+        "crz_entries": 2701
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 18,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-27",
+        "crz_entries": 6221
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 18,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-27",
+        "crz_entries": 3759
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 18,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-27",
+        "crz_entries": 2849
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 18,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-27",
+        "crz_entries": 4554
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 18,
+        "detection_region": "Queens",
+        "date_str": "2026-06-27",
+        "crz_entries": 3910
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 18,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-27",
+        "crz_entries": 2549
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 18,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-27",
+        "crz_entries": 2605
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 19,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-27",
+        "crz_entries": 5835
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 19,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-27",
+        "crz_entries": 3412
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 19,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-27",
+        "crz_entries": 2588
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 19,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-27",
+        "crz_entries": 4823
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 19,
+        "detection_region": "Queens",
+        "date_str": "2026-06-27",
+        "crz_entries": 3338
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 19,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-27",
+        "crz_entries": 2073
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 19,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-27",
+        "crz_entries": 2269
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 20,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-27",
+        "crz_entries": 5328
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 20,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-27",
+        "crz_entries": 3390
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 20,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-27",
+        "crz_entries": 2676
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 20,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-27",
+        "crz_entries": 4558
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 20,
+        "detection_region": "Queens",
+        "date_str": "2026-06-27",
+        "crz_entries": 3041
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 20,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-27",
+        "crz_entries": 1533
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 20,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-27",
+        "crz_entries": 1858
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 21,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-27",
+        "crz_entries": 5529
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 21,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-27",
+        "crz_entries": 3269
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 21,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-27",
+        "crz_entries": 2661
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 21,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-27",
+        "crz_entries": 4087
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 21,
+        "detection_region": "Queens",
+        "date_str": "2026-06-27",
+        "crz_entries": 3089
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 21,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-27",
+        "crz_entries": 1737
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 21,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-27",
+        "crz_entries": 1605
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 22,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-27",
+        "crz_entries": 5725
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 22,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-27",
+        "crz_entries": 3301
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 22,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-27",
+        "crz_entries": 2735
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 22,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-27",
+        "crz_entries": 4146
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 22,
+        "detection_region": "Queens",
+        "date_str": "2026-06-27",
+        "crz_entries": 3040
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 22,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-27",
+        "crz_entries": 1692
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 22,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-27",
+        "crz_entries": 1598
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 23,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-27",
+        "crz_entries": 5268
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 23,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-27",
+        "crz_entries": 3217
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 23,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-27",
+        "crz_entries": 2379
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 23,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-27",
+        "crz_entries": 3392
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 23,
+        "detection_region": "Queens",
+        "date_str": "2026-06-27",
+        "crz_entries": 2668
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 23,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-27",
+        "crz_entries": 1396
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Saturday",
+        "hour": 23,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-27",
+        "crz_entries": 1407
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 0,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-25",
+        "crz_entries": 3095
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 0,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-25",
+        "crz_entries": 2609
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 0,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-25",
+        "crz_entries": 1047
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 0,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-25",
+        "crz_entries": 2270
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 0,
+        "detection_region": "Queens",
+        "date_str": "2026-06-25",
+        "crz_entries": 1512
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 0,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-25",
+        "crz_entries": 1001
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 0,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-25",
+        "crz_entries": 794
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 1,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-25",
+        "crz_entries": 2034
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 1,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-25",
+        "crz_entries": 1829
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 1,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-25",
+        "crz_entries": 656
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 1,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-25",
+        "crz_entries": 1464
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 1,
+        "detection_region": "Queens",
+        "date_str": "2026-06-25",
+        "crz_entries": 936
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 1,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-25",
+        "crz_entries": 654
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 1,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-25",
+        "crz_entries": 543
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 2,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-25",
+        "crz_entries": 1416
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 2,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-25",
+        "crz_entries": 1132
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 2,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-25",
+        "crz_entries": 475
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 2,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-25",
+        "crz_entries": 988
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 2,
+        "detection_region": "Queens",
+        "date_str": "2026-06-25",
+        "crz_entries": 648
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 2,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-25",
+        "crz_entries": 405
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 2,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-25",
+        "crz_entries": 366
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 3,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-25",
+        "crz_entries": 1511
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 3,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-25",
+        "crz_entries": 1083
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 3,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-25",
+        "crz_entries": 435
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 3,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-25",
+        "crz_entries": 1019
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 3,
+        "detection_region": "Queens",
+        "date_str": "2026-06-25",
+        "crz_entries": 792
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 3,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-25",
+        "crz_entries": 327
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 3,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-25",
+        "crz_entries": 381
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 4,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-25",
+        "crz_entries": 2701
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 4,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-25",
+        "crz_entries": 1343
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 4,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-25",
+        "crz_entries": 862
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 4,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-25",
+        "crz_entries": 1915
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 4,
+        "detection_region": "Queens",
+        "date_str": "2026-06-25",
+        "crz_entries": 1391
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 4,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-25",
+        "crz_entries": 340
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 4,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-25",
+        "crz_entries": 781
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 5,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-25",
+        "crz_entries": 3700
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 5,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-25",
+        "crz_entries": 1521
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 5,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-25",
+        "crz_entries": 1426
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 5,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-25",
+        "crz_entries": 3995
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 5,
+        "detection_region": "Queens",
+        "date_str": "2026-06-25",
+        "crz_entries": 2755
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 5,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-25",
+        "crz_entries": 477
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 5,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-25",
+        "crz_entries": 1381
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 6,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-25",
+        "crz_entries": 5978
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 6,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-25",
+        "crz_entries": 2467
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 6,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-25",
+        "crz_entries": 2533
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 6,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-25",
+        "crz_entries": 5668
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 6,
+        "detection_region": "Queens",
+        "date_str": "2026-06-25",
+        "crz_entries": 5148
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 6,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-25",
+        "crz_entries": 946
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 6,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-25",
+        "crz_entries": 2957
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 7,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-25",
+        "crz_entries": 7000
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 7,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-25",
+        "crz_entries": 3408
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 7,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-25",
+        "crz_entries": 2782
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 7,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-25",
+        "crz_entries": 5629
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 7,
+        "detection_region": "Queens",
+        "date_str": "2026-06-25",
+        "crz_entries": 5887
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 7,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-25",
+        "crz_entries": 1619
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 7,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-25",
+        "crz_entries": 3514
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 8,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-25",
+        "crz_entries": 7378
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 8,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-25",
+        "crz_entries": 3682
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 8,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-25",
+        "crz_entries": 2975
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 8,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-25",
+        "crz_entries": 5093
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 8,
+        "detection_region": "Queens",
+        "date_str": "2026-06-25",
+        "crz_entries": 5988
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 8,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-25",
+        "crz_entries": 2077
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 8,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-25",
+        "crz_entries": 3586
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 9,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-25",
+        "crz_entries": 7482
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 9,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-25",
+        "crz_entries": 3731
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 9,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-25",
+        "crz_entries": 2500
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 9,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-25",
+        "crz_entries": 5060
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 9,
+        "detection_region": "Queens",
+        "date_str": "2026-06-25",
+        "crz_entries": 5506
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 9,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-25",
+        "crz_entries": 1964
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 9,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-25",
+        "crz_entries": 3301
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 10,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-25",
+        "crz_entries": 6647
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 10,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-25",
+        "crz_entries": 3771
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 10,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-25",
+        "crz_entries": 2720
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 10,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-25",
+        "crz_entries": 3943
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 10,
+        "detection_region": "Queens",
+        "date_str": "2026-06-25",
+        "crz_entries": 4789
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 10,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-25",
+        "crz_entries": 1885
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 10,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-25",
+        "crz_entries": 3093
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 11,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-25",
+        "crz_entries": 6012
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 11,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-25",
+        "crz_entries": 3660
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 11,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-25",
+        "crz_entries": 2684
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 11,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-25",
+        "crz_entries": 3731
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 11,
+        "detection_region": "Queens",
+        "date_str": "2026-06-25",
+        "crz_entries": 4310
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 11,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-25",
+        "crz_entries": 1877
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 11,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-25",
+        "crz_entries": 2543
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 12,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-25",
+        "crz_entries": 5889
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 12,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-25",
+        "crz_entries": 3481
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 12,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-25",
+        "crz_entries": 2650
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 12,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-25",
+        "crz_entries": 3568
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 12,
+        "detection_region": "Queens",
+        "date_str": "2026-06-25",
+        "crz_entries": 4292
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 12,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-25",
+        "crz_entries": 2003
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 12,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-25",
+        "crz_entries": 2294
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 13,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-25",
+        "crz_entries": 5933
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 13,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-25",
+        "crz_entries": 3415
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 13,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-25",
+        "crz_entries": 2397
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 13,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-25",
+        "crz_entries": 3469
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 13,
+        "detection_region": "Queens",
+        "date_str": "2026-06-25",
+        "crz_entries": 4413
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 13,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-25",
+        "crz_entries": 1994
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 13,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-25",
+        "crz_entries": 2470
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 14,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-25",
+        "crz_entries": 6073
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 14,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-25",
+        "crz_entries": 3693
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 14,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-25",
+        "crz_entries": 2352
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 14,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-25",
+        "crz_entries": 3619
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 14,
+        "detection_region": "Queens",
+        "date_str": "2026-06-25",
+        "crz_entries": 4480
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 14,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-25",
+        "crz_entries": 2056
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 14,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-25",
+        "crz_entries": 2586
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 15,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-25",
+        "crz_entries": 5941
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 15,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-25",
+        "crz_entries": 3992
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 15,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-25",
+        "crz_entries": 2344
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 15,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-25",
+        "crz_entries": 3864
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 15,
+        "detection_region": "Queens",
+        "date_str": "2026-06-25",
+        "crz_entries": 4703
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 15,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-25",
+        "crz_entries": 2006
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 15,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-25",
+        "crz_entries": 2457
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 16,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-25",
+        "crz_entries": 6034
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 16,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-25",
+        "crz_entries": 4021
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 16,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-25",
+        "crz_entries": 2584
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 16,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-25",
+        "crz_entries": 3879
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 16,
+        "detection_region": "Queens",
+        "date_str": "2026-06-25",
+        "crz_entries": 4769
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 16,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-25",
+        "crz_entries": 2238
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 16,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-25",
+        "crz_entries": 2225
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 17,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-25",
+        "crz_entries": 5650
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 17,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-25",
+        "crz_entries": 4128
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 17,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-25",
+        "crz_entries": 2791
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 17,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-25",
+        "crz_entries": 3512
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 17,
+        "detection_region": "Queens",
+        "date_str": "2026-06-25",
+        "crz_entries": 4819
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 17,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-25",
+        "crz_entries": 2214
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 17,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-25",
+        "crz_entries": 2651
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 18,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-25",
+        "crz_entries": 5552
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 18,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-25",
+        "crz_entries": 4456
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 18,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-25",
+        "crz_entries": 3077
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 18,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-25",
+        "crz_entries": 3746
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 18,
+        "detection_region": "Queens",
+        "date_str": "2026-06-25",
+        "crz_entries": 4283
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 18,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-25",
+        "crz_entries": 2276
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 18,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-25",
+        "crz_entries": 2605
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 19,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-25",
+        "crz_entries": 5493
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 19,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-25",
+        "crz_entries": 4298
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 19,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-25",
+        "crz_entries": 3043
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 19,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-25",
+        "crz_entries": 3691
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 19,
+        "detection_region": "Queens",
+        "date_str": "2026-06-25",
+        "crz_entries": 3723
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 19,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-25",
+        "crz_entries": 2293
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 19,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-25",
+        "crz_entries": 2109
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 20,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-25",
+        "crz_entries": 5522
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 20,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-25",
+        "crz_entries": 3688
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 20,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-25",
+        "crz_entries": 2706
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 20,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-25",
+        "crz_entries": 3742
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 20,
+        "detection_region": "Queens",
+        "date_str": "2026-06-25",
+        "crz_entries": 3252
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 20,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-25",
+        "crz_entries": 1900
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 20,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-25",
+        "crz_entries": 1588
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 21,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-25",
+        "crz_entries": 5556
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 21,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-25",
+        "crz_entries": 3642
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 21,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-25",
+        "crz_entries": 2554
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 21,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-25",
+        "crz_entries": 3838
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 21,
+        "detection_region": "Queens",
+        "date_str": "2026-06-25",
+        "crz_entries": 3191
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 21,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-25",
+        "crz_entries": 1807
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 21,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-25",
+        "crz_entries": 1780
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 22,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-25",
+        "crz_entries": 5311
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 22,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-25",
+        "crz_entries": 3939
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 22,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-25",
+        "crz_entries": 2526
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 22,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-25",
+        "crz_entries": 3544
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 22,
+        "detection_region": "Queens",
+        "date_str": "2026-06-25",
+        "crz_entries": 2622
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 22,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-25",
+        "crz_entries": 1813
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 22,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-25",
+        "crz_entries": 1609
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 23,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-25",
+        "crz_entries": 4575
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 23,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-25",
+        "crz_entries": 3530
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 23,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-25",
+        "crz_entries": 2283
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 23,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-25",
+        "crz_entries": 2616
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 23,
+        "detection_region": "Queens",
+        "date_str": "2026-06-25",
+        "crz_entries": 2544
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 23,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-25",
+        "crz_entries": 1625
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Thursday",
+        "hour": 23,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-25",
+        "crz_entries": 1268
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 4,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-23",
+        "crz_entries": 2107
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 4,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-23",
+        "crz_entries": 962
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 4,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-23",
+        "crz_entries": 705
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 4,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-23",
+        "crz_entries": 1488
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 4,
+        "detection_region": "Queens",
+        "date_str": "2026-06-23",
+        "crz_entries": 1150
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 4,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-23",
+        "crz_entries": 249
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 4,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-23",
+        "crz_entries": 604
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 5,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-23",
+        "crz_entries": 3684
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 5,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-23",
+        "crz_entries": 1541
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 5,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-23",
+        "crz_entries": 1400
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 5,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-23",
+        "crz_entries": 3879
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 5,
+        "detection_region": "Queens",
+        "date_str": "2026-06-23",
+        "crz_entries": 2554
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 5,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-23",
+        "crz_entries": 488
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 5,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-23",
+        "crz_entries": 1376
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 6,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-23",
+        "crz_entries": 6347
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 6,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-23",
+        "crz_entries": 2489
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 6,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-23",
+        "crz_entries": 2458
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 6,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-23",
+        "crz_entries": 5801
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 6,
+        "detection_region": "Queens",
+        "date_str": "2026-06-23",
+        "crz_entries": 4955
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 6,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-23",
+        "crz_entries": 989
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 6,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-23",
+        "crz_entries": 2829
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 7,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-23",
+        "crz_entries": 7138
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 7,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-23",
+        "crz_entries": 3426
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 7,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-23",
+        "crz_entries": 2940
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 7,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-23",
+        "crz_entries": 5790
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 7,
+        "detection_region": "Queens",
+        "date_str": "2026-06-23",
+        "crz_entries": 4762
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 7,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-23",
+        "crz_entries": 1593
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 7,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-23",
+        "crz_entries": 3505
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 8,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-23",
+        "crz_entries": 7398
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 8,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-23",
+        "crz_entries": 3857
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 8,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-23",
+        "crz_entries": 3434
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 8,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-23",
+        "crz_entries": 5366
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 8,
+        "detection_region": "Queens",
+        "date_str": "2026-06-23",
+        "crz_entries": 5601
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 8,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-23",
+        "crz_entries": 2042
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 8,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-23",
+        "crz_entries": 3717
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 9,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-23",
+        "crz_entries": 7268
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 9,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-23",
+        "crz_entries": 3732
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 9,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-23",
+        "crz_entries": 3519
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 9,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-23",
+        "crz_entries": 5311
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 9,
+        "detection_region": "Queens",
+        "date_str": "2026-06-23",
+        "crz_entries": 5456
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 9,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-23",
+        "crz_entries": 2183
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 9,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-23",
+        "crz_entries": 3335
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 10,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-23",
+        "crz_entries": 6474
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 10,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-23",
+        "crz_entries": 3522
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 10,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-23",
+        "crz_entries": 2683
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 10,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-23",
+        "crz_entries": 5147
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 10,
+        "detection_region": "Queens",
+        "date_str": "2026-06-23",
+        "crz_entries": 4717
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 10,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-23",
+        "crz_entries": 1958
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 10,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-23",
+        "crz_entries": 3001
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 11,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-23",
+        "crz_entries": 5930
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 11,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-23",
+        "crz_entries": 3552
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 11,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-23",
+        "crz_entries": 2762
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 11,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-23",
+        "crz_entries": 4573
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 11,
+        "detection_region": "Queens",
+        "date_str": "2026-06-23",
+        "crz_entries": 4427
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 11,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-23",
+        "crz_entries": 1960
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 11,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-23",
+        "crz_entries": 2585
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 12,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-23",
+        "crz_entries": 5408
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 12,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-23",
+        "crz_entries": 3696
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 12,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-23",
+        "crz_entries": 2746
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 12,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-23",
+        "crz_entries": 3822
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 12,
+        "detection_region": "Queens",
+        "date_str": "2026-06-23",
+        "crz_entries": 4091
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 12,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-23",
+        "crz_entries": 1980
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 12,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-23",
+        "crz_entries": 2146
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 13,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-23",
+        "crz_entries": 5473
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 13,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-23",
+        "crz_entries": 3662
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 13,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-23",
+        "crz_entries": 2837
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 13,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-23",
+        "crz_entries": 3868
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 13,
+        "detection_region": "Queens",
+        "date_str": "2026-06-23",
+        "crz_entries": 4010
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 13,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-23",
+        "crz_entries": 1983
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 13,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-23",
+        "crz_entries": 2129
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 14,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-23",
+        "crz_entries": 5372
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 14,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-23",
+        "crz_entries": 3934
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 14,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-23",
+        "crz_entries": 2649
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 14,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-23",
+        "crz_entries": 3667
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 14,
+        "detection_region": "Queens",
+        "date_str": "2026-06-23",
+        "crz_entries": 4570
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 14,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-23",
+        "crz_entries": 2076
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 14,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-23",
+        "crz_entries": 2248
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 15,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-23",
+        "crz_entries": 5794
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 15,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-23",
+        "crz_entries": 4141
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 15,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-23",
+        "crz_entries": 2768
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 15,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-23",
+        "crz_entries": 3793
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 15,
+        "detection_region": "Queens",
+        "date_str": "2026-06-23",
+        "crz_entries": 4594
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 15,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-23",
+        "crz_entries": 2282
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 15,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-23",
+        "crz_entries": 2347
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 16,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-23",
+        "crz_entries": 5577
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 16,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-23",
+        "crz_entries": 4358
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 16,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-23",
+        "crz_entries": 2760
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 16,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-23",
+        "crz_entries": 3699
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 16,
+        "detection_region": "Queens",
+        "date_str": "2026-06-23",
+        "crz_entries": 4709
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 16,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-23",
+        "crz_entries": 2427
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 16,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-23",
+        "crz_entries": 2561
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 17,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-23",
+        "crz_entries": 5231
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 17,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-23",
+        "crz_entries": 4112
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 17,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-23",
+        "crz_entries": 2691
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 17,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-23",
+        "crz_entries": 3442
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 17,
+        "detection_region": "Queens",
+        "date_str": "2026-06-23",
+        "crz_entries": 4447
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 17,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-23",
+        "crz_entries": 2350
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 17,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-23",
+        "crz_entries": 2722
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 18,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-23",
+        "crz_entries": 5142
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 18,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-23",
+        "crz_entries": 4424
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 18,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-23",
+        "crz_entries": 2465
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 18,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-23",
+        "crz_entries": 3916
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 18,
+        "detection_region": "Queens",
+        "date_str": "2026-06-23",
+        "crz_entries": 4205
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 18,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-23",
+        "crz_entries": 2546
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 18,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-23",
+        "crz_entries": 2800
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 19,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-23",
+        "crz_entries": 5440
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 19,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-23",
+        "crz_entries": 4509
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 19,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-23",
+        "crz_entries": 2589
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 19,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-23",
+        "crz_entries": 3455
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 19,
+        "detection_region": "Queens",
+        "date_str": "2026-06-23",
+        "crz_entries": 3287
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 19,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-23",
+        "crz_entries": 2317
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 19,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-23",
+        "crz_entries": 1883
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 20,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-23",
+        "crz_entries": 4825
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 20,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-23",
+        "crz_entries": 3706
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 20,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-23",
+        "crz_entries": 2236
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 20,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-23",
+        "crz_entries": 2991
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 20,
+        "detection_region": "Queens",
+        "date_str": "2026-06-23",
+        "crz_entries": 2946
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 20,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-23",
+        "crz_entries": 1855
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 20,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-23",
+        "crz_entries": 1272
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 21,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-23",
+        "crz_entries": 5645
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 21,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-23",
+        "crz_entries": 3912
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 21,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-23",
+        "crz_entries": 2253
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 21,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-23",
+        "crz_entries": 3475
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 21,
+        "detection_region": "Queens",
+        "date_str": "2026-06-23",
+        "crz_entries": 2918
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 21,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-23",
+        "crz_entries": 1785
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 21,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-23",
+        "crz_entries": 1444
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 22,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-23",
+        "crz_entries": 5612
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 22,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-23",
+        "crz_entries": 3677
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 22,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-23",
+        "crz_entries": 2086
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 22,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-23",
+        "crz_entries": 3226
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 22,
+        "detection_region": "Queens",
+        "date_str": "2026-06-23",
+        "crz_entries": 2529
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 22,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-23",
+        "crz_entries": 1837
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 22,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-23",
+        "crz_entries": 1345
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 23,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-23",
+        "crz_entries": 4470
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 23,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-23",
+        "crz_entries": 3269
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 23,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-23",
+        "crz_entries": 1761
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 23,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-23",
+        "crz_entries": 2197
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 23,
+        "detection_region": "Queens",
+        "date_str": "2026-06-23",
+        "crz_entries": 1977
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 23,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-23",
+        "crz_entries": 1355
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Tuesday",
+        "hour": 23,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-23",
+        "crz_entries": 979
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 0,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-24",
+        "crz_entries": 2732
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 0,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-24",
+        "crz_entries": 2519
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 0,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-24",
+        "crz_entries": 946
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 0,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-24",
+        "crz_entries": 1673
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 0,
+        "detection_region": "Queens",
+        "date_str": "2026-06-24",
+        "crz_entries": 1576
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 0,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-24",
+        "crz_entries": 920
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 0,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-24",
+        "crz_entries": 647
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 1,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-24",
+        "crz_entries": 1890
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 1,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-24",
+        "crz_entries": 1446
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 1,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-24",
+        "crz_entries": 567
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 1,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-24",
+        "crz_entries": 1266
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 1,
+        "detection_region": "Queens",
+        "date_str": "2026-06-24",
+        "crz_entries": 980
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 1,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-24",
+        "crz_entries": 542
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 1,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-24",
+        "crz_entries": 428
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 2,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-24",
+        "crz_entries": 1283
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 2,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-24",
+        "crz_entries": 1051
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 2,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-24",
+        "crz_entries": 376
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 2,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-24",
+        "crz_entries": 981
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 2,
+        "detection_region": "Queens",
+        "date_str": "2026-06-24",
+        "crz_entries": 602
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 2,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-24",
+        "crz_entries": 335
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 2,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-24",
+        "crz_entries": 316
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 3,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-24",
+        "crz_entries": 1354
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 3,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-24",
+        "crz_entries": 913
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 3,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-24",
+        "crz_entries": 394
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 3,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-24",
+        "crz_entries": 938
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 3,
+        "detection_region": "Queens",
+        "date_str": "2026-06-24",
+        "crz_entries": 761
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 3,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-24",
+        "crz_entries": 269
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 3,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-24",
+        "crz_entries": 318
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 4,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-24",
+        "crz_entries": 2789
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 4,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-24",
+        "crz_entries": 1303
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 4,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-24",
+        "crz_entries": 885
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 4,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-24",
+        "crz_entries": 1885
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 4,
+        "detection_region": "Queens",
+        "date_str": "2026-06-24",
+        "crz_entries": 1596
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 4,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-24",
+        "crz_entries": 338
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 4,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-24",
+        "crz_entries": 820
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 5,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-24",
+        "crz_entries": 3888
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 5,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-24",
+        "crz_entries": 1539
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 5,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-24",
+        "crz_entries": 1452
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 5,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-24",
+        "crz_entries": 4323
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 5,
+        "detection_region": "Queens",
+        "date_str": "2026-06-24",
+        "crz_entries": 2646
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 5,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-24",
+        "crz_entries": 449
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 5,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-24",
+        "crz_entries": 1382
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 6,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-24",
+        "crz_entries": 6127
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 6,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-24",
+        "crz_entries": 2516
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 6,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-24",
+        "crz_entries": 2281
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 6,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-24",
+        "crz_entries": 6051
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 6,
+        "detection_region": "Queens",
+        "date_str": "2026-06-24",
+        "crz_entries": 4900
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 6,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-24",
+        "crz_entries": 949
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 6,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-24",
+        "crz_entries": 3062
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 7,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-24",
+        "crz_entries": 7408
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 7,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-24",
+        "crz_entries": 3441
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 7,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-24",
+        "crz_entries": 2422
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 7,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-24",
+        "crz_entries": 5553
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 7,
+        "detection_region": "Queens",
+        "date_str": "2026-06-24",
+        "crz_entries": 5756
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 7,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-24",
+        "crz_entries": 1643
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 7,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-24",
+        "crz_entries": 3678
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 8,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-24",
+        "crz_entries": 7385
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 8,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-24",
+        "crz_entries": 3582
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 8,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-24",
+        "crz_entries": 3178
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 8,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-24",
+        "crz_entries": 5510
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 8,
+        "detection_region": "Queens",
+        "date_str": "2026-06-24",
+        "crz_entries": 5502
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 8,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-24",
+        "crz_entries": 2119
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 8,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-24",
+        "crz_entries": 3893
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 9,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-24",
+        "crz_entries": 7622
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 9,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-24",
+        "crz_entries": 3596
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 9,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-24",
+        "crz_entries": 3384
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 9,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-24",
+        "crz_entries": 5239
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 9,
+        "detection_region": "Queens",
+        "date_str": "2026-06-24",
+        "crz_entries": 5606
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 9,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-24",
+        "crz_entries": 2210
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 9,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-24",
+        "crz_entries": 3302
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 10,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-24",
+        "crz_entries": 6686
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 10,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-24",
+        "crz_entries": 3753
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 10,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-24",
+        "crz_entries": 2941
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 10,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-24",
+        "crz_entries": 4787
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 10,
+        "detection_region": "Queens",
+        "date_str": "2026-06-24",
+        "crz_entries": 4458
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 10,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-24",
+        "crz_entries": 2203
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 10,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-24",
+        "crz_entries": 3044
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 11,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-24",
+        "crz_entries": 6097
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 11,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-24",
+        "crz_entries": 3667
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 11,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-24",
+        "crz_entries": 2165
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 11,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-24",
+        "crz_entries": 4796
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 11,
+        "detection_region": "Queens",
+        "date_str": "2026-06-24",
+        "crz_entries": 4323
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 11,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-24",
+        "crz_entries": 2139
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 11,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-24",
+        "crz_entries": 2831
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 12,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-24",
+        "crz_entries": 5953
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 12,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-24",
+        "crz_entries": 3861
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 12,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-24",
+        "crz_entries": 2575
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 12,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-24",
+        "crz_entries": 4149
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 12,
+        "detection_region": "Queens",
+        "date_str": "2026-06-24",
+        "crz_entries": 4141
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 12,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-24",
+        "crz_entries": 2171
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 12,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-24",
+        "crz_entries": 2702
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 13,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-24",
+        "crz_entries": 5705
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 13,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-24",
+        "crz_entries": 3713
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 13,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-24",
+        "crz_entries": 2927
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 13,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-24",
+        "crz_entries": 3965
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 13,
+        "detection_region": "Queens",
+        "date_str": "2026-06-24",
+        "crz_entries": 4439
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 13,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-24",
+        "crz_entries": 2141
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 13,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-24",
+        "crz_entries": 2409
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 14,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-24",
+        "crz_entries": 5799
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 14,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-24",
+        "crz_entries": 3930
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 14,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-24",
+        "crz_entries": 2932
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 14,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-24",
+        "crz_entries": 3768
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 14,
+        "detection_region": "Queens",
+        "date_str": "2026-06-24",
+        "crz_entries": 4616
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 14,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-24",
+        "crz_entries": 2039
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 14,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-24",
+        "crz_entries": 2396
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 15,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-24",
+        "crz_entries": 5565
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 15,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-24",
+        "crz_entries": 4186
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 15,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-24",
+        "crz_entries": 2771
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 15,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-24",
+        "crz_entries": 3863
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 15,
+        "detection_region": "Queens",
+        "date_str": "2026-06-24",
+        "crz_entries": 4748
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 15,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-24",
+        "crz_entries": 2133
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 15,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-24",
+        "crz_entries": 2085
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 16,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-24",
+        "crz_entries": 6025
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 16,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-24",
+        "crz_entries": 4294
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 16,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-24",
+        "crz_entries": 2819
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 16,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-24",
+        "crz_entries": 3853
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 16,
+        "detection_region": "Queens",
+        "date_str": "2026-06-24",
+        "crz_entries": 4667
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 16,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-24",
+        "crz_entries": 2164
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 16,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-24",
+        "crz_entries": 2106
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 17,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-24",
+        "crz_entries": 5414
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 17,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-24",
+        "crz_entries": 3951
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 17,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-24",
+        "crz_entries": 2718
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 17,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-24",
+        "crz_entries": 3569
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 17,
+        "detection_region": "Queens",
+        "date_str": "2026-06-24",
+        "crz_entries": 4507
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 17,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-24",
+        "crz_entries": 2271
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 17,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-24",
+        "crz_entries": 1807
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 18,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-24",
+        "crz_entries": 5617
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 18,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-24",
+        "crz_entries": 4306
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 18,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-24",
+        "crz_entries": 2820
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 18,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-24",
+        "crz_entries": 3538
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 18,
+        "detection_region": "Queens",
+        "date_str": "2026-06-24",
+        "crz_entries": 4516
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 18,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-24",
+        "crz_entries": 2308
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 18,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-24",
+        "crz_entries": 1477
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 19,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-24",
+        "crz_entries": 5699
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 19,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-24",
+        "crz_entries": 4496
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 19,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-24",
+        "crz_entries": 2922
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 19,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-24",
+        "crz_entries": 3903
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 19,
+        "detection_region": "Queens",
+        "date_str": "2026-06-24",
+        "crz_entries": 4147
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 19,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-24",
+        "crz_entries": 2362
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 19,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-24",
+        "crz_entries": 1724
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 20,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-24",
+        "crz_entries": 4898
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 20,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-24",
+        "crz_entries": 4013
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 20,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-24",
+        "crz_entries": 2588
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 20,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-24",
+        "crz_entries": 3281
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 20,
+        "detection_region": "Queens",
+        "date_str": "2026-06-24",
+        "crz_entries": 3540
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 20,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-24",
+        "crz_entries": 1889
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 20,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-24",
+        "crz_entries": 1578
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 21,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-24",
+        "crz_entries": 5416
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 21,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-24",
+        "crz_entries": 3999
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 21,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-24",
+        "crz_entries": 2516
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 21,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-24",
+        "crz_entries": 3397
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 21,
+        "detection_region": "Queens",
+        "date_str": "2026-06-24",
+        "crz_entries": 3552
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 21,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-24",
+        "crz_entries": 1853
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 21,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-24",
+        "crz_entries": 1558
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 22,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-24",
+        "crz_entries": 4962
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 22,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-24",
+        "crz_entries": 3887
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 22,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-24",
+        "crz_entries": 2541
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 22,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-24",
+        "crz_entries": 4177
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 22,
+        "detection_region": "Queens",
+        "date_str": "2026-06-24",
+        "crz_entries": 2826
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 22,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-24",
+        "crz_entries": 1922
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 22,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-24",
+        "crz_entries": 1540
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 23,
+        "detection_region": "Brooklyn",
+        "date_str": "2026-06-24",
+        "crz_entries": 4288
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 23,
+        "detection_region": "East 60th St",
+        "date_str": "2026-06-24",
+        "crz_entries": 3501
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 23,
+        "detection_region": "FDR Drive",
+        "date_str": "2026-06-24",
+        "crz_entries": 1910
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 23,
+        "detection_region": "New Jersey",
+        "date_str": "2026-06-24",
+        "crz_entries": 2524
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 23,
+        "detection_region": "Queens",
+        "date_str": "2026-06-24",
+        "crz_entries": 2086
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 23,
+        "detection_region": "West 60th St",
+        "date_str": "2026-06-24",
+        "crz_entries": 1506
+    },
+    {
+        "year": 2026,
+        "month": "June",
+        "day": "Wednesday",
+        "hour": 23,
+        "detection_region": "West Side Highway",
+        "date_str": "2026-06-24",
+        "crz_entries": 1158
     }
 ]
