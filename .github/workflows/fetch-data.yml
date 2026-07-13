@@ -1,8 +1,10 @@
 name: Fetch and Summarize MTA Data
+
 on:
   schedule:
     - cron: '0 0 * * *'
   workflow_dispatch:
+
 jobs:
   fetch:
     runs-on: ubuntu-latest
@@ -12,25 +14,35 @@ jobs:
       - uses: actions/checkout@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.9'
+
       - name: Install dependencies
         run: pip install pandas
+
       - name: Fetch and Summarize
         run: |
-          curl -H "X-App-Token: ${{ secrets.API_KEY }}" \
-          'https://data.ny.gov/resource/t6yz-b64h.json?$limit=50000' > data.json
+          # Fixed: explicitly order by toll_hour DESC so we get the most
+          # recent rows. Without $order, Socrata returns rows in an
+          # unspecified order, which meant every run was pulling the same
+          # early slice of the dataset instead of new data.
+          curl -G -H "X-App-Token: ${{ secrets.API_KEY }}" \
+            --data-urlencode '$limit=50000' \
+            --data-urlencode '$order=toll_hour DESC' \
+            'https://data.ny.gov/resource/t6yz-b64h.json' > data.json
           python summarize.py
+
       - name: Commit and Push
         run: |
           git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
-          
+
           # Add the historical archive file
           git add -f data_archive.json
-          
+
           # Check for changes and push
           if git diff --staged --quiet; then
             echo "No changes to commit."
