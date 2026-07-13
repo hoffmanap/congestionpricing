@@ -1,129 +1,672 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MTA Mobility Benchmark Dashboard</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-<body class="bg-gray-50 p-8">
-    <div class="max-w-6xl mx-auto">
-        <h1 class="text-3xl font-bold mb-6 text-gray-900">Congestion Zone: Historical Benchmarking</h1>
-        
-        <div class="flex gap-4 mb-6 bg-white p-4 rounded-lg shadow-sm border flex-wrap">
-            <select id="yearFilter" onchange="updateFilters()" class="p-2 border rounded"></select>
-            <select id="monthFilter" onchange="updateFilters()" class="p-2 border rounded"></select>
-            <select id="regionFilter" onchange="updateFilters()" class="p-2 border rounded"></select>
-            <select id="benchmarkFilter" onchange="render()" class="p-2 border rounded border-red-300">
-                <option value="">Select Benchmark Date...</option>
-            </select>
-        </div>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRZ Traffic Monitor — Prototype v2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+<style>
+  :root{
+    --bg: #14171B;
+    --asphalt: #1A1D22;
+    --panel: #1B1F26;
+    --panel-raised: #20252D;
+    --grid-line: #2A3038;
+    --text: #E7E4DC;
+    --text-muted: #868D99;
 
-        <div class="bg-white p-6 rounded-xl shadow-sm border">
-            <canvas id="mtaChart" height="100"></canvas>
-        </div>
+    --amber: #FDB813;
+    --blue: #4C8DFF;
+    --dot-orange: #FF6A2C;
+
+    --sign-green: #0C6B3D;
+    --sign-green-dark: #084E2C;
+    --sign-white: #F3F1E8;
+
+    --caution-yellow: #F4C430;
+    --caution-black: #16181B;
+
+    --heat-0: #1B1F26;
+    --heat-1: #4A3B1A;
+    --heat-2: #8C6A1B;
+    --heat-3: #C4941C;
+    --heat-4: #FDB813;
+    --heat-5: #FF6A2C;
+  }
+
+  *{ box-sizing: border-box; }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+  }
+
+  body{
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'IBM Plex Mono', monospace;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .display{
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .wrap{ max-width: 1180px; margin: 0 auto; padding: 0 24px 64px; }
+
+  /* ---------- Hero / gantry ticker ---------- */
+  .hero{
+    border-bottom: 3px solid var(--amber);
+    background: linear-gradient(180deg, #14171d 0%, var(--bg) 100%);
+    padding: 28px 24px 22px;
+  }
+  .hero-inner{
+    max-width: 1180px; margin: 0 auto;
+    display: flex; justify-content: space-between; align-items: flex-end;
+    flex-wrap: wrap; gap: 20px;
+  }
+  .hero-title-block .eyebrow{ color: var(--amber); font-size: 12px; letter-spacing: 0.25em; margin-bottom: 6px; }
+  .hero-title-block h1{ font-size: clamp(28px, 4vw, 44px); margin: 0; line-height: 1; font-weight: 700; }
+  .hero-title-block p{
+    font-family: 'IBM Plex Mono', monospace; text-transform: none; letter-spacing: 0;
+    color: var(--text-muted); font-size: 13px; margin: 8px 0 0; max-width: 540px;
+  }
+  .ticker{ display: flex; gap: 2px; border: 1px solid #33261066; background: #0d0f0c; padding: 2px; }
+  .ticker-cell{
+    background: #14140f; padding: 10px 18px; min-width: 128px; text-align: right;
+    opacity: 0; animation: flicker-in 0.5s ease-out forwards;
+  }
+  .ticker-cell:nth-child(2){ animation-delay: 0.12s; }
+  .ticker-cell:nth-child(3){ animation-delay: 0.24s; }
+  @keyframes flicker-in{ 0%{opacity:0;} 40%{opacity:0.4;} 60%{opacity:0.15;} 100%{opacity:1;} }
+  .ticker-label{ display:block; font-size:10px; letter-spacing:0.15em; color:#8a6a20; margin-bottom:4px; }
+  .ticker-value{ display:block; font-size:22px; font-weight:600; color:var(--amber); text-shadow:0 0 6px rgba(253,184,19,0.35); font-variant-numeric: tabular-nums; }
+  .ticker-value.blue{ color: var(--blue); text-shadow: 0 0 6px rgba(76,141,255,0.35); }
+  .ticker-value.down::before{ content:"▼ "; font-size:13px; }
+  .ticker-value.up::before{ content:"▲ "; font-size:13px; }
+
+  /* ---------- Lane divider (structural device between sections) ---------- */
+  .lane-divider{
+    height: 26px;
+    margin: 8px 0 0;
+    background: var(--asphalt);
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid var(--grid-line);
+    border-bottom: 1px solid var(--grid-line);
+  }
+  .lane-divider::before{
+    content: "";
+    position: absolute;
+    top: 50%; left: 0; right: 0;
+    height: 3px;
+    transform: translateY(-50%);
+    background-image: repeating-linear-gradient(90deg, var(--caution-yellow) 0 26px, transparent 26px 46px);
+    opacity: 0.55;
+  }
+
+  /* ---------- Street-sign section headers ---------- */
+  section{ padding-top: 26px; }
+  .sign-head{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--sign-green);
+    border: 3px solid var(--sign-white);
+    border-radius: 6px;
+    padding: 10px 18px;
+    position: relative;
+    box-shadow: 0 3px 0 var(--sign-green-dark), 0 6px 10px rgba(0,0,0,0.35);
+    margin: 18px 0 16px;
+  }
+  .sign-head::before, .sign-head::after,
+  .sign-head .bolt-tr, .sign-head .bolt-bl{
+    content: "";
+    position: absolute;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--sign-white);
+    opacity: 0.85;
+  }
+  .sign-head::before{ top: 5px; left: 5px; }
+  .sign-head::after{ bottom: 5px; right: 5px; }
+  .sign-head .bolt-tr{ top: 5px; right: 5px; }
+  .sign-head .bolt-bl{ bottom: 5px; left: 5px; }
+  .sign-head h2{
+    color: var(--sign-white);
+    font-size: 17px;
+    margin: 0;
+    font-weight: 700;
+  }
+  .section-hint{
+    display: block;
+    color: var(--text-muted);
+    font-size: 11px;
+    text-transform: none;
+    letter-spacing: 0;
+    font-family: 'IBM Plex Mono', monospace;
+    margin: -4px 0 16px 2px;
+  }
+
+  .panel{ background: var(--panel); border: 1px solid var(--grid-line); border-radius: 2px; padding: 20px; }
+  .trend-wrap{ position: relative; height: 230px; }
+
+  /* ---------- Filters ---------- */
+  .filters{ display:flex; gap:14px; flex-wrap:wrap; margin: 4px 0 20px; }
+  .field label{ display:block; font-size:10px; letter-spacing:0.15em; color: var(--text-muted); margin-bottom:6px; text-transform:uppercase; }
+  select{
+    appearance:none; -webkit-appearance:none;
+    background: var(--panel-raised); border:1px solid var(--grid-line); color: var(--text);
+    font-family:'IBM Plex Mono', monospace; font-size:13px; padding:9px 32px 9px 12px; border-radius:2px;
+    background-image: linear-gradient(45deg, transparent 50%, var(--amber) 50%), linear-gradient(135deg, var(--amber) 50%, transparent 50%);
+    background-position: calc(100% - 16px) center, calc(100% - 11px) center;
+    background-size: 5px 5px, 5px 5px; background-repeat:no-repeat; min-width:150px;
+  }
+  select:focus-visible{ outline:2px solid var(--amber); outline-offset:1px; }
+
+  /* ---------- Heatmap ---------- */
+  .heatmap-layout{ display:grid; grid-template-columns: 1.6fr 1fr; gap:20px; }
+  @media (max-width: 860px){ .heatmap-layout{ grid-template-columns: 1fr; } }
+  .heat-grid{ display:grid; grid-template-columns: 46px repeat(24, 1fr); gap:3px; }
+  .heat-hour-label{ grid-row:1; font-size:9px; color:var(--text-muted); text-align:center; visibility:hidden; }
+  .heat-hour-label.show{ visibility:visible; }
+  .heat-day-label{ font-size:10px; color:var(--text-muted); display:flex; align-items:center; }
+  .heat-cell{ aspect-ratio:1/1; border-radius:1px; cursor:default; transition:outline 0.1s ease; }
+  .heat-cell:hover{ outline:1.5px solid var(--text); outline-offset:-1px; }
+  .heat-legend{ display:flex; align-items:center; gap:6px; margin-top:14px; font-size:10px; color:var(--text-muted); }
+  .heat-legend .swatch{ width:14px; height:10px; border-radius:1px; }
+  .heat-tooltip{ font-size:12px; color:var(--text-muted); min-height:40px; margin-top:10px; border-top:1px dashed var(--grid-line); padding-top:10px; }
+  .heat-tooltip strong{ color: var(--amber); font-weight:600; }
+
+  .benchmark-chart-wrap{ height:200px; margin-top:6px; }
+  .benchmark-stat{ font-size:28px; color:var(--amber); font-weight:600; }
+  .benchmark-stat-label{ font-size:10px; color:var(--text-muted); letter-spacing:0.1em; }
+
+  /* ---------- Region shield cards ---------- */
+  .region-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:14px; }
+  .region-card{ background: var(--panel); border:1px solid var(--grid-line); padding:14px 16px; }
+  .region-card-head{ display:flex; align-items:center; gap:10px; margin-bottom:8px; }
+  .shield{
+    flex: 0 0 auto;
+    width: 34px; height: 38px;
+    background: #16233f;
+    border: 2px solid var(--sign-white);
+    clip-path: polygon(50% 0%, 100% 22%, 100% 75%, 50% 100%, 0% 75%, 0% 22%);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Oswald', sans-serif; font-weight:700; font-size:12px; color: var(--sign-white);
+  }
+  .region-name-block{ flex: 1 1 auto; }
+  .region-name{ font-family:'Oswald', sans-serif; text-transform:uppercase; font-size:13px; letter-spacing:0.03em; display:block; }
+  .region-delta{ font-size:11px; }
+  .region-delta.up{ color: var(--amber); }
+  .region-delta.down{ color: var(--blue); }
+  .region-sparkline{ height:54px; }
+
+  footer{ text-align:center; color: var(--text-muted); font-size:11px; padding:40px 0 10px; }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-title-block">
+      <div class="eyebrow display">MTA · Congestion Relief Zone</div>
+      <h1 class="display">Traffic Monitor</h1>
+      <p>Gantry-level entry counts across the CRZ tolling boundary, aggregated from MTA open data. Prototype view — figures below are synthetic, shaped to match the real archive's schema.</p>
+    </div>
+    <div class="ticker" id="ticker">
+      <div class="ticker-cell">
+        <span class="ticker-label">LATEST DAY TOTAL</span>
+        <span class="ticker-value" id="statLatest">—</span>
+      </div>
+      <div class="ticker-cell">
+        <span class="ticker-label">7-DAY AVG</span>
+        <span class="ticker-value blue" id="statAvg">—</span>
+      </div>
+      <div class="ticker-cell">
+        <span class="ticker-label">YoY CHANGE</span>
+        <span class="ticker-value" id="statYoy">—</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="lane-divider"></div>
+
+<div class="wrap">
+
+  <section>
+    <div class="sign-head"><span class="bolt-tr"></span><span class="bolt-bl"></span><h2 class="display">Archive Trend</h2></div>
+    <span class="section-hint">daily total entries, full history — watch for the caution marker</span>
+    <div class="panel trend-wrap">
+      <canvas id="trendChart"></canvas>
+    </div>
+  </section>
+
+  <div class="lane-divider"></div>
+
+  <section>
+    <div class="sign-head"><span class="bolt-tr"></span><span class="bolt-bl"></span><h2 class="display">Hourly Pattern</h2></div>
+    <span class="section-hint">average entries by hour &amp; day of week — darker is quieter, brighter is busier</span>
+
+    <div class="filters">
+      <div class="field"><label for="yearFilter">Year</label><select id="yearFilter"></select></div>
+      <div class="field"><label for="monthFilter">Month</label><select id="monthFilter"></select></div>
+      <div class="field"><label for="regionFilter">Region</label><select id="regionFilter"></select></div>
+      <div class="field"><label for="benchmarkFilter">Benchmark date</label><select id="benchmarkFilter"><option value="">None</option></select></div>
     </div>
 
-    <script>
-        let cachedData = [];
+    <div class="heatmap-layout">
+      <div class="panel">
+        <div class="heat-grid" id="heatGrid"></div>
+        <div class="heat-legend">
+          <span>Quiet</span>
+          <span class="swatch" style="background:var(--heat-0)"></span>
+          <span class="swatch" style="background:var(--heat-1)"></span>
+          <span class="swatch" style="background:var(--heat-2)"></span>
+          <span class="swatch" style="background:var(--heat-3)"></span>
+          <span class="swatch" style="background:var(--heat-4)"></span>
+          <span class="swatch" style="background:var(--heat-5)"></span>
+          <span>Peak</span>
+        </div>
+        <div class="heat-tooltip" id="heatTooltip">Hover a cell for detail.</div>
+      </div>
 
-        async function init() {
-            try {
-                // Fetch the historical archive
-                const res = await fetch('./data_archive.json');
-                cachedData = await res.json();
-                
-                const years = [...new Set(cachedData.map(r => String(r.year)))].sort((a,b) => b-a);
-                const yearSel = document.getElementById('yearFilter');
-                years.forEach(y => yearSel.add(new Option(y, y)));
-                
-                updateFilters();
-            } catch (err) {
-                console.error("Initialization failed:", err);
-            }
-        }
+      <div class="panel">
+        <div class="benchmark-stat-label">SELECTED DAY VS. MONTHLY AVERAGE</div>
+        <div class="benchmark-stat" id="benchmarkStat">Pick a benchmark date</div>
+        <div class="benchmark-chart-wrap"><canvas id="benchmarkChart"></canvas></div>
+      </div>
+    </div>
+  </section>
 
-        function updateFilters() {
-            const y = document.getElementById('yearFilter').value;
-            
-            // Update Months
-            const months = [...new Set(cachedData.filter(r => String(r.year) === y).map(r => r.month))];
-            const mSel = document.getElementById('monthFilter');
-            mSel.innerHTML = '';
-            months.forEach(m => mSel.add(new Option(m, m)));
-            
-            // Update Regions
-            const regions = [...new Set(cachedData.map(r => r.detection_region))];
-            const rSel = document.getElementById('regionFilter');
-            rSel.innerHTML = '';
-            regions.forEach(r => rSel.add(new Option(r, r)));
+  <div class="lane-divider"></div>
 
-            // Update Benchmark Dates
-            const bSel = document.getElementById('benchmarkFilter');
-            const dates = [...new Set(cachedData.map(r => r.date_str))].sort((a,b) => b.localeCompare(a));
-            bSel.innerHTML = '<option value="">Select Benchmark Date...</option>';
-            dates.forEach(d => bSel.add(new Option(d, d)));
-            
-            render();
-        }
+  <section>
+    <div class="sign-head"><span class="bolt-tr"></span><span class="bolt-bl"></span><h2 class="display">Region Comparison</h2></div>
+    <span class="section-hint">monthly totals, full archive — each crossing now has its own distinct profile</span>
+    <div class="region-grid" id="regionGrid"></div>
+  </section>
 
-        function render() {
-            const y = document.getElementById('yearFilter').value;
-            const m = document.getElementById('monthFilter').value;
-            const r = document.getElementById('regionFilter').value;
-            const bDate = document.getElementById('benchmarkFilter').value;
-            
-            if (!y || !m || !r) return;
+  <footer>Prototype built with synthetic data matching the data_archive.json schema · Chart.js for line charts, custom CSS grid for the heatmap</footer>
+</div>
 
-            const filtered = cachedData.filter(d => 
-                String(d.year) === String(y) && d.month === m && d.detection_region === r
-            );
+<script>
+/* =========================================================
+   1. Synthetic data generation — each region now has a
+      distinct base, trend, weekend ratio, and peak timing
+      so the shapes are genuinely different, not just rescaled.
+   ========================================================= */
 
-            const ctx = document.getElementById('mtaChart').getContext('2d');
-            const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-            const colors = ['#f87171', '#fb923c', '#fbbf24', '#4ade80', '#22d3ee', '#818cf8', '#e879f9'];
+const REGIONS = [
+  "Lincoln Tunnel",
+  "Holland Tunnel",
+  "Queensboro Bridge",
+  "Williamsburg Bridge",
+  "FDR Drive at 60th St",
+  "West Side Highway at 60th St"
+];
 
-            const datasets = days.map((day, i) => ({
-                label: day,
-                data: Array.from({length: 24}, (_, h) => {
-                    const row = filtered.find(r => r.day === day && r.hour === h);
-                    return row ? row.crz_entries : 0;
-                }),
-                borderColor: colors[i], borderWidth: 1, fill: false, tension: 0.3
-            }));
+const REGION_CODE = {
+  "Lincoln Tunnel": "LT",
+  "Holland Tunnel": "HT",
+  "Queensboro Bridge": "QB",
+  "Williamsburg Bridge": "WB",
+  "FDR Drive at 60th St": "FDR",
+  "West Side Highway at 60th St": "WSH"
+};
 
-            // Add selected Benchmark line if a date is chosen
-            if (bDate) {
-                datasets.push({
-                    label: `Benchmark: ${bDate}`,
-                    data: Array.from({length: 24}, (_, h) => {
-                        // Searching 'cachedData' (the whole archive) to find the benchmark
-                        const row = cachedData.find(item => 
-                            item.date_str === bDate && 
-                            item.hour === h && 
-                            item.detection_region === r
-                        );
-                        return row ? row.crz_entries : 0;
-                    }),
-                    borderColor: '#e11d48', borderWidth: 3, borderDash: [5, 5], fill: false
-                });
-            }
+const REGION_PROFILE = {
+  "Lincoln Tunnel":               { base: 15200, trendRate: 0.014, weekendRatio: 0.55, peakShift: 0,   seed: 11 },
+  "Holland Tunnel":                { base: 9800,  trendRate: -0.004, weekendRatio: 0.62, peakShift: 1,  seed: 23 },
+  "Queensboro Bridge":             { base: 12600, trendRate: 0.020, weekendRatio: 0.48, peakShift: -1,  seed: 37 },
+  "Williamsburg Bridge":           { base: 8200,  trendRate: 0.026, weekendRatio: 0.70, peakShift: 2,   seed: 51 },
+  "FDR Drive at 60th St":          { base: 11100, trendRate: 0.006, weekendRatio: 0.40, peakShift: 0,   seed: 67 },
+  "West Side Highway at 60th St":  { base: 9400,  trendRate: 0.010, weekendRatio: 0.58, peakShift: -2,  seed: 79 }
+};
 
-            if (window.myChart instanceof Chart) window.myChart.destroy();
-            window.myChart = new Chart(ctx, {
-                type: 'line',
-                data: { labels: Array.from({length: 24}, (_, i) => `${i}:00`), datasets },
-                options: {
-                    responsive: true,
-                    scales: {
-                        y: { title: { display: true, text: 'Number of Entries' }, beginAtZero: true },
-                        x: { title: { display: true, text: 'Hour of Day' } }
-                    }
-                }
-            });
-        }
-        init();
-    </script>
+const DAY_NAMES = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+const MONTH_NAMES = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+function mulberry32(a){
+  return function(){
+    a |= 0; a = a + 0x6D2B79F5 | 0;
+    let t = Math.imul(a ^ a >>> 15, 1 | a);
+    t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+    return ((t ^ t >>> 14) >>> 0) / 4294967296;
+  };
+}
+
+function hourProfile(hour, isWeekend, peakShift, weekendRatio){
+  if(!isWeekend){
+    const am = Math.exp(-Math.pow(hour-(8+peakShift),2)/6);
+    const pm = Math.exp(-Math.pow(hour-(17.5+peakShift),2)/8);
+    return 0.25 + am*0.9 + pm*1.0;
+  } else {
+    const mid = Math.exp(-Math.pow(hour-(14+peakShift),2)/22);
+    return weekendRatio * (0.2 + mid*0.75) / 0.55;
+  }
+}
+
+const START = new Date('2025-01-05');
+const END = new Date('2026-07-12');
+
+const archive = [];
+const dailyTotals = [];
+const randCache = {};
+function randFor(seed){
+  if(!randCache[seed]) randCache[seed] = mulberry32(seed);
+  return randCache[seed];
+}
+
+for(let d = new Date(START); d <= END; d.setDate(d.getDate()+1)){
+  const dateObj = new Date(d);
+  const dow = dateObj.getDay();
+  const isWeekend = dow === 0 || dow === 6;
+  const dateStr = dateObj.toISOString().slice(0,10);
+  const monthsSinceStart = (dateObj.getFullYear()-2025)*12 + dateObj.getMonth();
+  const summerDip = (dateObj.getMonth() === 6) ? 0.93 : 1;
+  let dayTotal = 0;
+
+  for(const region of REGIONS){
+    const p = REGION_PROFILE[region];
+    const trend = 1 + monthsSinceStart * p.trendRate;
+    const rand = randFor(p.seed);
+    for(let hour=0; hour<24; hour++){
+      const profile = hourProfile(hour, isWeekend, p.peakShift, p.weekendRatio);
+      const noise = 0.9 + rand()*0.2;
+      const entries = Math.max(0, Math.round(p.base/24 * profile * trend * summerDip * noise));
+      archive.push({
+        year: dateObj.getFullYear(), month: MONTH_NAMES[dateObj.getMonth()], day: DAY_NAMES[dow],
+        hour, detection_region: region, date_str: dateStr, crz_entries: entries
+      });
+      dayTotal += entries;
+    }
+  }
+  dailyTotals.push({ date_str: dateStr, total: dayTotal, dateObj: new Date(dateObj) });
+}
+
+/* =========================================================
+   2. Chart.js defaults
+   ========================================================= */
+Chart.defaults.font.family = "'IBM Plex Mono', monospace";
+Chart.defaults.color = '#868D99';
+Chart.defaults.borderColor = '#2A3038';
+
+/* =========================================================
+   3. Hero ticker stats
+   ========================================================= */
+function shiftDate(dateStr, days){
+  const d = new Date(dateStr); d.setDate(d.getDate()+days); return d.toISOString().slice(0,10);
+}
+(function(){
+  const last = dailyTotals[dailyTotals.length-1];
+  const last7 = dailyTotals.slice(-7);
+  const avg7 = Math.round(last7.reduce((s,r)=>s+r.total,0)/last7.length);
+  const oneYearAgoIdx = dailyTotals.findIndex(r => r.date_str === shiftDate(last.date_str, -365));
+  const yoy = oneYearAgoIdx >= 0 ? ((last.total - dailyTotals[oneYearAgoIdx].total) / dailyTotals[oneYearAgoIdx].total * 100) : null;
+
+  document.getElementById('statLatest').textContent = last.total.toLocaleString();
+  document.getElementById('statAvg').textContent = avg7.toLocaleString();
+  const yoyEl = document.getElementById('statYoy');
+  if(yoy !== null){
+    yoyEl.textContent = Math.abs(yoy).toFixed(1) + '%';
+    yoyEl.classList.add(yoy >= 0 ? 'up' : 'down');
+  } else { yoyEl.textContent = 'n/a'; }
+})();
+
+/* =========================================================
+   4. Archive trend chart with a caution-diamond road-sign marker
+   ========================================================= */
+const trendCtx = document.getElementById('trendChart').getContext('2d');
+new Chart(trendCtx, {
+  type: 'line',
+  data: {
+    labels: dailyTotals.map(r => r.date_str),
+    datasets: [{
+      data: dailyTotals.map(r => r.total),
+      borderColor: '#FDB813', backgroundColor: 'rgba(253,184,19,0.08)',
+      borderWidth: 1.5, pointRadius: 0, fill: true, tension: 0.15
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: { callbacks: { title: (items) => items[0].label, label: (item) => ' ' + item.parsed.y.toLocaleString() + ' entries' } }
+    },
+    scales: {
+      x: { ticks: { maxTicksLimit: 8, font: { size: 10 } }, grid: { display: false } },
+      y: { ticks: { font: { size: 10 }, callback: (v) => (v/1000) + 'k' }, grid: { color: '#20252D' } }
+    }
+  },
+  plugins: [{
+    id: 'roadSignMarker',
+    afterDraw(chart){
+      const idx = dailyTotals.findIndex(r => r.date_str === '2026-03-03');
+      if(idx === -1) return;
+      const x = chart.scales.x.getPixelForValue(idx);
+      const { top, bottom } = chart.chartArea;
+      const ctx = chart.ctx;
+
+      ctx.save();
+      ctx.strokeStyle = 'rgba(244,196,48,0.55)';
+      ctx.setLineDash([3,3]);
+      ctx.beginPath();
+      ctx.moveTo(x, top+22);
+      ctx.lineTo(x, bottom);
+      ctx.stroke();
+      ctx.setLineDash([]);
+
+      const cy = top + 12, size = 9;
+      ctx.translate(x, cy);
+      ctx.rotate(Math.PI/4);
+      ctx.fillStyle = '#F4C430';
+      ctx.strokeStyle = '#16181B';
+      ctx.lineWidth = 1.5;
+      ctx.fillRect(-size, -size, size*2, size*2);
+      ctx.strokeRect(-size, -size, size*2, size*2);
+      ctx.rotate(-Math.PI/4);
+      ctx.translate(-x, -cy);
+      ctx.fillStyle = '#16181B';
+      ctx.font = "bold 11px 'IBM Plex Mono'";
+      ctx.textAlign = 'center';
+      ctx.fillText('!', x, cy+4);
+
+      ctx.fillStyle = '#F4C430';
+      ctx.font = "9px 'IBM Plex Mono'";
+      ctx.textAlign = 'left';
+      ctx.fillText('MAR 3 · TOLLING UPHELD BY COURT', x + 14, cy + 4);
+      ctx.restore();
+    }
+  }]
+});
+
+/* =========================================================
+   5. Filters
+   ========================================================= */
+const yearSel = document.getElementById('yearFilter');
+const monthSel = document.getElementById('monthFilter');
+const regionSel = document.getElementById('regionFilter');
+const benchmarkSel = document.getElementById('benchmarkFilter');
+
+const years = [...new Set(archive.map(r => r.year))].sort();
+years.forEach(y => yearSel.add(new Option(y, y)));
+yearSel.value = years[years.length-1];
+
+MONTH_NAMES.forEach(m => monthSel.add(new Option(m, m)));
+monthSel.value = MONTH_NAMES[new Date(END).getMonth()];
+
+REGIONS.forEach(r => regionSel.add(new Option(r, r)));
+
+[yearSel, monthSel, regionSel].forEach(el => el.addEventListener('change', () => {
+  updateBenchmarkOptions(); renderHeatmap();
+}));
+benchmarkSel.addEventListener('change', renderBenchmark);
+
+function currentScope(){
+  return archive.filter(r => String(r.year) === yearSel.value && r.month === monthSel.value && r.detection_region === regionSel.value);
+}
+function updateBenchmarkOptions(){
+  const dates = [...new Set(currentScope().map(r => r.date_str))].sort();
+  benchmarkSel.innerHTML = '<option value="">None</option>';
+  dates.forEach(d => benchmarkSel.add(new Option(d, d)));
+}
+
+/* =========================================================
+   6. Heatmap
+   ========================================================= */
+const heatGrid = document.getElementById('heatGrid');
+const heatTooltip = document.getElementById('heatTooltip');
+
+function heatColor(t){
+  const stops = ['#1B1F26','#4A3B1A','#8C6A1B','#C4941C','#FDB813','#FF6A2C'];
+  const scaled = t * (stops.length-1);
+  const i = Math.min(stops.length-2, Math.floor(scaled));
+  const frac = scaled - i;
+  return lerpColor(stops[i], stops[i+1], frac);
+}
+function lerpColor(a,b,t){
+  const pa = hexToRgb(a), pb = hexToRgb(b);
+  return `rgb(${Math.round(pa.r+(pb.r-pa.r)*t)},${Math.round(pa.g+(pb.g-pa.g)*t)},${Math.round(pa.b+(pb.b-pa.b)*t)})`;
+}
+function hexToRgb(hex){ const v = parseInt(hex.slice(1),16); return { r:(v>>16)&255, g:(v>>8)&255, b:v&255 }; }
+
+function renderHeatmap(){
+  const scope = currentScope();
+  const sums = {}, counts = {};
+  scope.forEach(r => { const key = r.day+'|'+r.hour; sums[key]=(sums[key]||0)+r.crz_entries; counts[key]=(counts[key]||0)+1; });
+  let max = 0; const avgMap = {};
+  DAY_NAMES.forEach(day => { for(let h=0; h<24; h++){ const key=day+'|'+h; const avg = counts[key] ? sums[key]/counts[key] : 0; avgMap[key]=avg; if(avg>max) max=avg; } });
+
+  heatGrid.innerHTML = '';
+  heatGrid.appendChild(cellDiv('', 'heat-day-label'));
+  for(let h=0; h<24; h++){
+    const lbl = document.createElement('div');
+    lbl.className = 'heat-hour-label' + (h % 3 === 0 ? ' show' : '');
+    lbl.textContent = h;
+    heatGrid.appendChild(lbl);
+  }
+  DAY_NAMES.forEach(day => {
+    heatGrid.appendChild(cellDiv(day.slice(0,3), 'heat-day-label'));
+    for(let h=0; h<24; h++){
+      const avg = avgMap[day+'|'+h];
+      const t = max > 0 ? avg/max : 0;
+      const cell = document.createElement('div');
+      cell.className = 'heat-cell';
+      cell.style.background = heatColor(t);
+      cell.addEventListener('mouseenter', () => {
+        heatTooltip.innerHTML = `<strong>${day}, ${h}:00</strong> — avg ${Math.round(avg).toLocaleString()} entries/hr in ${regionSel.value}, ${monthSel.value} ${yearSel.value}`;
+      });
+      heatGrid.appendChild(cell);
+    }
+  });
+}
+function cellDiv(text, cls){ const d = document.createElement('div'); d.className = cls; d.textContent = text; return d; }
+
+/* =========================================================
+   7. Benchmark chart
+   ========================================================= */
+let benchmarkChart = null;
+function renderBenchmark(){
+  const scope = currentScope();
+  const bDate = benchmarkSel.value;
+  const monthlyAvgByHour = new Array(24).fill(0);
+  const counts = new Array(24).fill(0);
+  scope.forEach(r => { monthlyAvgByHour[r.hour]+=r.crz_entries; counts[r.hour]++; });
+  for(let h=0;h<24;h++){ monthlyAvgByHour[h] = counts[h] ? monthlyAvgByHour[h]/counts[h] : 0; }
+
+  const benchmarkStat = document.getElementById('benchmarkStat');
+  let benchmarkByHour = null;
+  if(bDate){
+    benchmarkByHour = new Array(24).fill(0);
+    scope.filter(r => r.date_str === bDate).forEach(r => benchmarkByHour[r.hour] = r.crz_entries);
+    const dayTotal = benchmarkByHour.reduce((a,b)=>a+b,0);
+    const monthTotal = monthlyAvgByHour.reduce((a,b)=>a+b,0);
+    const diff = monthTotal ? ((dayTotal-monthTotal)/monthTotal*100) : 0;
+    benchmarkStat.textContent = (diff>=0?'+':'') + diff.toFixed(1) + '% vs avg day';
+  } else {
+    benchmarkStat.textContent = 'Pick a benchmark date';
+  }
+
+  const ctx = document.getElementById('benchmarkChart').getContext('2d');
+  if(benchmarkChart) benchmarkChart.destroy();
+  const datasets = [{ label: 'Monthly average', data: monthlyAvgByHour, borderColor: '#4C8DFF', borderWidth: 1.5, pointRadius: 0, tension: 0.25 }];
+  if(benchmarkByHour){
+    datasets.push({ label: bDate, data: benchmarkByHour, borderColor: '#FDB813', borderWidth: 2, borderDash: [4,3], pointRadius: 0, tension: 0.25 });
+  }
+  benchmarkChart = new Chart(ctx, {
+    type: 'line',
+    data: { labels: Array.from({length:24},(_,i)=>i+':00'), datasets },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: true, labels: { boxWidth: 10, font: { size: 10 } } } },
+      scales: { x: { ticks: { maxTicksLimit: 8, font:{size:9} }, grid: { display:false } }, y: { ticks: { font:{size:9} }, grid: { color: '#20252D' } } }
+    }
+  });
+}
+
+/* =========================================================
+   8. Region small multiples with shield badges
+   ========================================================= */
+const regionGrid = document.getElementById('regionGrid');
+REGIONS.forEach(region => {
+  const card = document.createElement('div');
+  card.className = 'region-card';
+
+  const monthly = {};
+  archive.filter(r => r.detection_region === region).forEach(r => {
+    const key = r.year + '-' + r.month;
+    monthly[key] = (monthly[key]||0) + r.crz_entries;
+  });
+  const keys = Object.keys(monthly);
+  const values = keys.map(k => monthly[k]);
+  const first = values[0], lastV = values[values.length-1];
+  const delta = ((lastV-first)/first*100);
+
+  card.innerHTML = `
+    <div class="region-card-head">
+      <div class="shield">${REGION_CODE[region]}</div>
+      <div class="region-name-block">
+        <span class="region-name">${region}</span>
+        <span class="region-delta ${delta>=0?'up':'down'}">${delta>=0?'+':''}${delta.toFixed(0)}% over archive</span>
+      </div>
+    </div>
+    <div class="region-sparkline"><canvas></canvas></div>
+  `;
+  regionGrid.appendChild(card);
+
+  const ctx = card.querySelector('canvas').getContext('2d');
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: keys,
+      datasets: [{
+        data: values,
+        borderColor: delta>=0 ? '#FDB813' : '#4C8DFF',
+        backgroundColor: delta>=0 ? 'rgba(253,184,19,0.08)' : 'rgba(76,141,255,0.08)',
+        borderWidth: 1.5, pointRadius: 0, fill: true, tension: 0.3
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display:false }, tooltip: { enabled:false } },
+      scales: { x: { display:false }, y: { display:false } }
+    }
+  });
+});
+
+/* =========================================================
+   9. Initial render
+   ========================================================= */
+updateBenchmarkOptions();
+renderHeatmap();
+renderBenchmark();
+</script>
 </body>
 </html>
