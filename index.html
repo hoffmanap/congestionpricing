@@ -240,6 +240,8 @@
 
 <div class="wrap">
 
+  <div id="statusBanner" style="display:none; margin-top:20px; padding:12px 16px; border:1px solid var(--grid-line); background:var(--panel); font-size:12px; color:var(--text-muted);"></div>
+
   <section>
     <div class="sign-head"><span class="bolt-tr"></span><span class="bolt-bl"></span><h2 class="display">Archive Trend</h2></div>
     <span class="section-hint">daily total entries, full history — watch for the caution marker</span>
@@ -289,106 +291,57 @@
 
   <section>
     <div class="sign-head"><span class="bolt-tr"></span><span class="bolt-bl"></span><h2 class="display">Region Comparison</h2></div>
-    <span class="section-hint">monthly totals, full archive — each crossing now has its own distinct profile</span>
+    <span class="section-hint">monthly totals, full archive — compare crossings at a glance</span>
     <div class="region-grid" id="regionGrid"></div>
   </section>
 
-  <footer>Prototype built with synthetic data matching the data_archive.json schema · Chart.js for line charts, custom CSS grid for the heatmap</footer>
+  <footer>Live from data_archive.json · Chart.js for line charts, custom CSS grid for the heatmap</footer>
 </div>
 
 <script>
 /* =========================================================
-   1. Synthetic data generation — each region now has a
-      distinct base, trend, weekend ratio, and peak timing
-      so the shapes are genuinely different, not just rescaled.
+   1. Real data loader — fetches your actual data_archive.json
+      and derives everything (regions, shield codes) from
+      whatever is actually in the file, instead of assuming
+      fixed region names.
    ========================================================= */
-
-const REGIONS = [
-  "Lincoln Tunnel",
-  "Holland Tunnel",
-  "Queensboro Bridge",
-  "Williamsburg Bridge",
-  "FDR Drive at 60th St",
-  "West Side Highway at 60th St"
-];
-
-const REGION_CODE = {
-  "Lincoln Tunnel": "LT",
-  "Holland Tunnel": "HT",
-  "Queensboro Bridge": "QB",
-  "Williamsburg Bridge": "WB",
-  "FDR Drive at 60th St": "FDR",
-  "West Side Highway at 60th St": "WSH"
-};
-
-const REGION_PROFILE = {
-  "Lincoln Tunnel":               { base: 15200, trendRate: 0.014, weekendRatio: 0.55, peakShift: 0,   seed: 11 },
-  "Holland Tunnel":                { base: 9800,  trendRate: -0.004, weekendRatio: 0.62, peakShift: 1,  seed: 23 },
-  "Queensboro Bridge":             { base: 12600, trendRate: 0.020, weekendRatio: 0.48, peakShift: -1,  seed: 37 },
-  "Williamsburg Bridge":           { base: 8200,  trendRate: 0.026, weekendRatio: 0.70, peakShift: 2,   seed: 51 },
-  "FDR Drive at 60th St":          { base: 11100, trendRate: 0.006, weekendRatio: 0.40, peakShift: 0,   seed: 67 },
-  "West Side Highway at 60th St":  { base: 9400,  trendRate: 0.010, weekendRatio: 0.58, peakShift: -2,  seed: 79 }
-};
 
 const DAY_NAMES = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 const MONTH_NAMES = ['January','February','March','April','May','June','July','August','September','October','November','December'];
 
-function mulberry32(a){
-  return function(){
-    a |= 0; a = a + 0x6D2B79F5 | 0;
-    let t = Math.imul(a ^ a >>> 15, 1 | a);
-    t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
-    return ((t ^ t >>> 14) >>> 0) / 4294967296;
-  };
+let archive = [];
+let dailyTotals = [];
+let REGIONS = [];
+const REGION_CODE = {};
+
+function codeFor(name){
+  const stop = new Set(['at','the','of','st','street']);
+  const letters = name.split(/\s+/)
+    .filter(w => !stop.has(w.toLowerCase()))
+    .map(w => w[0])
+    .join('')
+    .toUpperCase();
+  return letters.slice(0, 3) || name.slice(0,2).toUpperCase();
 }
 
-function hourProfile(hour, isWeekend, peakShift, weekendRatio){
-  if(!isWeekend){
-    const am = Math.exp(-Math.pow(hour-(8+peakShift),2)/6);
-    const pm = Math.exp(-Math.pow(hour-(17.5+peakShift),2)/8);
-    return 0.25 + am*0.9 + pm*1.0;
-  } else {
-    const mid = Math.exp(-Math.pow(hour-(14+peakShift),2)/22);
-    return weekendRatio * (0.2 + mid*0.75) / 0.55;
-  }
+async function loadData(){
+  const res = await fetch('data_archive.json');
+  if(!res.ok) throw new Error(`Couldn't load data_archive.json (HTTP ${res.status})`);
+  archive = await res.json();
+  if(!Array.isArray(archive) || archive.length === 0) throw new Error('data_archive.json loaded but is empty');
+
+  REGIONS = [...new Set(archive.map(r => r.detection_region))].sort();
+  REGIONS.forEach(r => { REGION_CODE[r] = codeFor(r); });
+
+  const dailyMap = {};
+  archive.forEach(r => {
+    dailyMap[r.date_str] = (dailyMap[r.date_str] || 0) + Number(r.crz_entries || 0);
+  });
+  dailyTotals = Object.keys(dailyMap).sort().map(d => ({ date_str: d, total: dailyMap[d] }));
 }
 
-const START = new Date('2025-01-05');
-const END = new Date('2026-07-12');
-
-const archive = [];
-const dailyTotals = [];
-const randCache = {};
-function randFor(seed){
-  if(!randCache[seed]) randCache[seed] = mulberry32(seed);
-  return randCache[seed];
-}
-
-for(let d = new Date(START); d <= END; d.setDate(d.getDate()+1)){
-  const dateObj = new Date(d);
-  const dow = dateObj.getDay();
-  const isWeekend = dow === 0 || dow === 6;
-  const dateStr = dateObj.toISOString().slice(0,10);
-  const monthsSinceStart = (dateObj.getFullYear()-2025)*12 + dateObj.getMonth();
-  const summerDip = (dateObj.getMonth() === 6) ? 0.93 : 1;
-  let dayTotal = 0;
-
-  for(const region of REGIONS){
-    const p = REGION_PROFILE[region];
-    const trend = 1 + monthsSinceStart * p.trendRate;
-    const rand = randFor(p.seed);
-    for(let hour=0; hour<24; hour++){
-      const profile = hourProfile(hour, isWeekend, p.peakShift, p.weekendRatio);
-      const noise = 0.9 + rand()*0.2;
-      const entries = Math.max(0, Math.round(p.base/24 * profile * trend * summerDip * noise));
-      archive.push({
-        year: dateObj.getFullYear(), month: MONTH_NAMES[dateObj.getMonth()], day: DAY_NAMES[dow],
-        hour, detection_region: region, date_str: dateStr, crz_entries: entries
-      });
-      dayTotal += entries;
-    }
-  }
-  dailyTotals.push({ date_str: dateStr, total: dayTotal, dateObj: new Date(dateObj) });
+function shiftDate(dateStr, days){
+  const d = new Date(dateStr); d.setDate(d.getDate()+days); return d.toISOString().slice(0,10);
 }
 
 /* =========================================================
@@ -401,10 +354,7 @@ Chart.defaults.borderColor = '#2A3038';
 /* =========================================================
    3. Hero ticker stats
    ========================================================= */
-function shiftDate(dateStr, days){
-  const d = new Date(dateStr); d.setDate(d.getDate()+days); return d.toISOString().slice(0,10);
-}
-(function(){
+function renderTicker(){
   const last = dailyTotals[dailyTotals.length-1];
   const last7 = dailyTotals.slice(-7);
   const avg7 = Math.round(last7.reduce((s,r)=>s+r.total,0)/last7.length);
@@ -418,11 +368,12 @@ function shiftDate(dateStr, days){
     yoyEl.textContent = Math.abs(yoy).toFixed(1) + '%';
     yoyEl.classList.add(yoy >= 0 ? 'up' : 'down');
   } else { yoyEl.textContent = 'n/a'; }
-})();
+}
 
 /* =========================================================
    4. Archive trend chart with a caution-diamond road-sign marker
    ========================================================= */
+function renderTrendChart(){
 const trendCtx = document.getElementById('trendChart').getContext('2d');
 new Chart(trendCtx, {
   type: 'line',
@@ -486,6 +437,7 @@ new Chart(trendCtx, {
     }
   }]
 });
+}
 
 /* =========================================================
    5. Filters
@@ -495,19 +447,22 @@ const monthSel = document.getElementById('monthFilter');
 const regionSel = document.getElementById('regionFilter');
 const benchmarkSel = document.getElementById('benchmarkFilter');
 
-const years = [...new Set(archive.map(r => r.year))].sort();
-years.forEach(y => yearSel.add(new Option(y, y)));
-yearSel.value = years[years.length-1];
+function setupFilters(){
+  const years = [...new Set(archive.map(r => r.year))].sort();
+  years.forEach(y => yearSel.add(new Option(y, y)));
+  yearSel.value = years[years.length-1];
 
-MONTH_NAMES.forEach(m => monthSel.add(new Option(m, m)));
-monthSel.value = MONTH_NAMES[new Date(END).getMonth()];
+  MONTH_NAMES.forEach(m => monthSel.add(new Option(m, m)));
+  const lastMonth = MONTH_NAMES[new Date(dailyTotals[dailyTotals.length-1].date_str).getUTCMonth()];
+  monthSel.value = lastMonth;
 
-REGIONS.forEach(r => regionSel.add(new Option(r, r)));
+  REGIONS.forEach(r => regionSel.add(new Option(r, r)));
 
-[yearSel, monthSel, regionSel].forEach(el => el.addEventListener('change', () => {
-  updateBenchmarkOptions(); renderHeatmap();
-}));
-benchmarkSel.addEventListener('change', renderBenchmark);
+  [yearSel, monthSel, regionSel].forEach(el => el.addEventListener('change', () => {
+    updateBenchmarkOptions(); renderHeatmap();
+  }));
+  benchmarkSel.addEventListener('change', renderBenchmark);
+}
 
 function currentScope(){
   return archive.filter(r => String(r.year) === yearSel.value && r.month === monthSel.value && r.detection_region === regionSel.value);
@@ -614,59 +569,91 @@ function renderBenchmark(){
 /* =========================================================
    8. Region small multiples with shield badges
    ========================================================= */
-const regionGrid = document.getElementById('regionGrid');
-REGIONS.forEach(region => {
-  const card = document.createElement('div');
-  card.className = 'region-card';
+function renderRegionCards(){
+  const regionGrid = document.getElementById('regionGrid');
+  regionGrid.innerHTML = '';
+  REGIONS.forEach(region => {
+    const card = document.createElement('div');
+    card.className = 'region-card';
 
-  const monthly = {};
-  archive.filter(r => r.detection_region === region).forEach(r => {
-    const key = r.year + '-' + r.month;
-    monthly[key] = (monthly[key]||0) + r.crz_entries;
-  });
-  const keys = Object.keys(monthly);
-  const values = keys.map(k => monthly[k]);
-  const first = values[0], lastV = values[values.length-1];
-  const delta = ((lastV-first)/first*100);
+    const monthly = {};
+    archive.filter(r => r.detection_region === region).forEach(r => {
+      const key = r.year + '-' + String(MONTH_NAMES.indexOf(r.month)+1).padStart(2,'0');
+      monthly[key] = (monthly[key]||0) + r.crz_entries;
+    });
+    const keys = Object.keys(monthly).sort();
+    const values = keys.map(k => monthly[k]);
+    const first = values[0], lastV = values[values.length-1];
+    const delta = first ? ((lastV-first)/first*100) : 0;
 
-  card.innerHTML = `
-    <div class="region-card-head">
-      <div class="shield">${REGION_CODE[region]}</div>
-      <div class="region-name-block">
-        <span class="region-name">${region}</span>
-        <span class="region-delta ${delta>=0?'up':'down'}">${delta>=0?'+':''}${delta.toFixed(0)}% over archive</span>
+    card.innerHTML = `
+      <div class="region-card-head">
+        <div class="shield">${REGION_CODE[region]}</div>
+        <div class="region-name-block">
+          <span class="region-name">${region}</span>
+          <span class="region-delta ${delta>=0?'up':'down'}">${delta>=0?'+':''}${delta.toFixed(0)}% over archive</span>
+        </div>
       </div>
-    </div>
-    <div class="region-sparkline"><canvas></canvas></div>
-  `;
-  regionGrid.appendChild(card);
+      <div class="region-sparkline"><canvas></canvas></div>
+    `;
+    regionGrid.appendChild(card);
 
-  const ctx = card.querySelector('canvas').getContext('2d');
-  new Chart(ctx, {
-    type: 'line',
-    data: {
-      labels: keys,
-      datasets: [{
-        data: values,
-        borderColor: delta>=0 ? '#FDB813' : '#4C8DFF',
-        backgroundColor: delta>=0 ? 'rgba(253,184,19,0.08)' : 'rgba(76,141,255,0.08)',
-        borderWidth: 1.5, pointRadius: 0, fill: true, tension: 0.3
-      }]
-    },
-    options: {
-      responsive: true, maintainAspectRatio: false,
-      plugins: { legend: { display:false }, tooltip: { enabled:false } },
-      scales: { x: { display:false }, y: { display:false } }
-    }
+    const ctx = card.querySelector('canvas').getContext('2d');
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: keys,
+        datasets: [{
+          data: values,
+          borderColor: delta>=0 ? '#FDB813' : '#4C8DFF',
+          backgroundColor: delta>=0 ? 'rgba(253,184,19,0.08)' : 'rgba(76,141,255,0.08)',
+          borderWidth: 1.5, pointRadius: 0, fill: true, tension: 0.3
+        }]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: { legend: { display:false }, tooltip: { enabled:false } },
+        scales: { x: { display:false }, y: { display:false } }
+      }
+    });
   });
-});
+}
 
 /* =========================================================
-   9. Initial render
+   9. Init — load real data, then build everything
    ========================================================= */
-updateBenchmarkOptions();
-renderHeatmap();
-renderBenchmark();
+function showStatus(message, isError){
+  const banner = document.getElementById('statusBanner');
+  banner.style.display = 'block';
+  banner.style.borderColor = isError ? 'var(--dot-orange)' : 'var(--grid-line)';
+  banner.style.color = isError ? 'var(--dot-orange)' : 'var(--text-muted)';
+  banner.textContent = message;
+}
+
+async function init(){
+  showStatus('Loading data_archive.json…', false);
+  try {
+    await loadData();
+    document.getElementById('statusBanner').style.display = 'none';
+
+    renderTicker();
+    renderTrendChart();
+    setupFilters();
+    updateBenchmarkOptions();
+    renderHeatmap();
+    renderBenchmark();
+    renderRegionCards();
+  } catch (err) {
+    showStatus(
+      'Could not load data_archive.json — ' + err.message +
+      '. Make sure this file sits next to data_archive.json (e.g. both at the repo root, or both under /docs), and that the JSON is valid.',
+      true
+    );
+    console.error(err);
+  }
+}
+
+init();
 </script>
 </body>
 </html>
