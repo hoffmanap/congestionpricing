@@ -217,7 +217,8 @@
     <div class="hero-title-block">
       <div class="eyebrow display">MTA · Congestion Relief Zone</div>
       <h1 class="display">Traffic Monitor</h1>
-      <p>Gantry-level entry counts across the CRZ tolling boundary, aggregated from MTA open data. Prototype view — figures below are synthetic, shaped to match the real archive's schema.</p>
+      <p>Gantry-level entry counts across the CRZ tolling boundary, aggregated from MTA open data.</p>
+      <p id="freshnessNote" style="margin-top:4px; color:var(--text-muted);"></p>
     </div>
     <div class="ticker" id="ticker">
       <div class="ticker-cell">
@@ -363,6 +364,11 @@ function renderTicker(){
 
   document.getElementById('statLatest').textContent = last.total.toLocaleString();
   document.getElementById('statAvg').textContent = avg7.toLocaleString();
+
+  const lagDays = Math.round((Date.now() - new Date(last.date_str + 'T00:00:00Z').getTime()) / 86400000);
+  document.getElementById('freshnessNote').textContent =
+    `Data as of ${last.date_str}${lagDays > 0 ? ` — source is ${lagDays} day${lagDays===1?'':'s'} behind real time` : ''}`;
+
   const yoyEl = document.getElementById('statYoy');
   if(yoy !== null){
     yoyEl.textContent = Math.abs(yoy).toFixed(1) + '%';
@@ -582,16 +588,40 @@ function renderRegionCards(){
       monthly[key] = (monthly[key]||0) + r.crz_entries;
     });
     const keys = Object.keys(monthly).sort();
-    const values = keys.map(k => monthly[k]);
+
+    // The most recent month is very likely partial (the source lags
+    // behind real time), which would understate growth if compared
+    // directly. Use the last COMPLETE month for the delta instead --
+    // "complete" meaning the archive's latest date for that month
+    // matches that month's actual last calendar day.
+    function daysInMonth(key){
+      const [y, m] = key.split('-').map(Number);
+      return new Date(y, m, 0).getDate();
+    }
+    function lastDateInMonth(key){
+      const days = archive
+        .filter(r => r.detection_region === region && (r.year + '-' + String(MONTH_NAMES.indexOf(r.month)+1).padStart(2,'0')) === key)
+        .map(r => Number(r.date_str.slice(-2)));
+      return days.length ? Math.max(...days) : 0;
+    }
+
+    let compareKeys = keys;
+    const latestKey = keys[keys.length-1];
+    if(latestKey && lastDateInMonth(latestKey) < daysInMonth(latestKey)){
+      compareKeys = keys.slice(0, -1); // drop the partial current month
+    }
+
+    const values = compareKeys.map(k => monthly[k]);
     const first = values[0], lastV = values[values.length-1];
     const delta = first ? ((lastV-first)/first*100) : 0;
+    const partial = compareKeys.length < keys.length;
 
     card.innerHTML = `
       <div class="region-card-head">
         <div class="shield">${REGION_CODE[region]}</div>
         <div class="region-name-block">
           <span class="region-name">${region}</span>
-          <span class="region-delta ${delta>=0?'up':'down'}">${delta>=0?'+':''}${delta.toFixed(0)}% over archive</span>
+          <span class="region-delta ${delta>=0?'up':'down'}">${delta>=0?'+':''}${delta.toFixed(0)}% over archive${partial ? ' <span style="color:var(--text-muted)">(excl. partial month)</span>' : ''}</span>
         </div>
       </div>
       <div class="region-sparkline"><canvas></canvas></div>
