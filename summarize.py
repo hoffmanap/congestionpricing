@@ -32,7 +32,12 @@ new_data_list = new_summary.to_dict(orient='records')
 archive_file = 'data_archive.json'
 if os.path.exists(archive_file):
     with open(archive_file, 'r') as f:
-        full_data = json.load(f)
+        content = f.read().strip()
+    try:
+        full_data = json.loads(content) if content else []
+    except json.JSONDecodeError:
+        print(f"Warning: {archive_file} exists but isn't valid JSON -- starting fresh from an empty archive.")
+        full_data = []
 else:
     full_data = []
 
