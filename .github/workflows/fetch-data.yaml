@@ -70,8 +70,3 @@ jobs:
             git commit -m "Automated update of data_archive.json"
             git push origin main
           fi
-
-with open("data.json", "w") as f:
-    json.dump(all_rows, f)
-
-print(f"Total rows written to data.json: {len(all_rows)}")
