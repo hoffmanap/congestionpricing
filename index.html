@@ -156,6 +156,35 @@
   .panel{ background: var(--panel); border: 1px solid var(--grid-line); border-radius: 2px; padding: 20px; }
   .trend-wrap{ position: relative; height: 230px; }
 
+  /* ---------- Trend region toggle buttons (mini street signs) ---------- */
+  .trend-region-toggles{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 4px 0 16px;
+  }
+  .sign-toggle{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    background: var(--asphalt);
+    border: 2px solid var(--grid-line);
+    border-radius: 4px;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  }
+  .sign-toggle:hover{ border-color: var(--sign-white); color: var(--text); }
+  .sign-toggle.active{
+    background: var(--sign-green);
+    border-color: var(--sign-white);
+    color: var(--sign-white);
+    box-shadow: 0 2px 0 var(--sign-green-dark);
+  }
+  .sign-toggle:focus-visible{ outline: 2px solid var(--amber); outline-offset: 2px; }
+
   /* ---------- Filters ---------- */
   .filters{ display:flex; gap:14px; flex-wrap:wrap; margin: 4px 0 20px; }
   .field label{ display:block; font-size:10px; letter-spacing:0.15em; color: var(--text-muted); margin-bottom:6px; text-transform:uppercase; }
@@ -246,6 +275,7 @@
   <section>
     <div class="sign-head"><span class="bolt-tr"></span><span class="bolt-bl"></span><h2 class="display">Archive Trend</h2></div>
     <span class="section-hint">daily total entries, full history — watch for the caution marker</span>
+    <div class="trend-region-toggles" id="trendRegionToggles"></div>
     <div class="panel trend-wrap">
       <canvas id="trendChart"></canvas>
     </div>
@@ -312,6 +342,7 @@ const MONTH_NAMES = ['January','February','March','April','May','June','July','A
 
 let archive = [];
 let dailyTotals = [];
+let dailyByRegion = {}; // region -> Map(date_str -> total)
 let REGIONS = [];
 const REGION_CODE = {};
 
@@ -335,8 +366,13 @@ async function loadData(){
   REGIONS.forEach(r => { REGION_CODE[r] = codeFor(r); });
 
   const dailyMap = {};
+  dailyByRegion = {};
+  REGIONS.forEach(r => { dailyByRegion[r] = {}; });
+
   archive.forEach(r => {
-    dailyMap[r.date_str] = (dailyMap[r.date_str] || 0) + Number(r.crz_entries || 0);
+    const entries = Number(r.crz_entries || 0);
+    dailyMap[r.date_str] = (dailyMap[r.date_str] || 0) + entries;
+    dailyByRegion[r.detection_region][r.date_str] = (dailyByRegion[r.detection_region][r.date_str] || 0) + entries;
   });
   dailyTotals = Object.keys(dailyMap).sort().map(d => ({ date_str: d, total: dailyMap[d] }));
 }
@@ -379,23 +415,43 @@ function renderTicker(){
 /* =========================================================
    4. Archive trend chart with a caution-diamond road-sign marker
    ========================================================= */
+const REGION_LINE_COLORS = ['#4C8DFF','#FF6A2C','#7ED957','#C77DFF','#FF4D8D','#3AC7C7','#E0C341','#9AA5B1'];
+let trendChart = null;
+const activeTrendRegions = new Set();
+
+function buildTrendDatasets(){
+  const datasets = [{
+    label: 'Total (all CRZ)',
+    data: dailyTotals.map(r => r.total),
+    borderColor: '#FDB813', backgroundColor: 'rgba(253,184,19,0.08)',
+    borderWidth: 1.5, pointRadius: 0, fill: true, tension: 0.15
+  }];
+  [...activeTrendRegions].forEach((region, i) => {
+    const byDate = dailyByRegion[region] || {};
+    datasets.push({
+      label: region,
+      data: dailyTotals.map(r => byDate[r.date_str] || 0),
+      borderColor: REGION_LINE_COLORS[i % REGION_LINE_COLORS.length],
+      backgroundColor: 'transparent',
+      borderWidth: 1.5, pointRadius: 0, fill: false, tension: 0.15
+    });
+  });
+  return datasets;
+}
+
 function renderTrendChart(){
 const trendCtx = document.getElementById('trendChart').getContext('2d');
-new Chart(trendCtx, {
+trendChart = new Chart(trendCtx, {
   type: 'line',
   data: {
     labels: dailyTotals.map(r => r.date_str),
-    datasets: [{
-      data: dailyTotals.map(r => r.total),
-      borderColor: '#FDB813', backgroundColor: 'rgba(253,184,19,0.08)',
-      borderWidth: 1.5, pointRadius: 0, fill: true, tension: 0.15
-    }]
+    datasets: buildTrendDatasets()
   },
   options: {
     responsive: true, maintainAspectRatio: false,
     plugins: {
-      legend: { display: false },
-      tooltip: { callbacks: { title: (items) => items[0].label, label: (item) => ' ' + item.parsed.y.toLocaleString() + ' entries' } }
+      legend: { display: true, labels: { boxWidth: 10, font: { size: 10 } } },
+      tooltip: { callbacks: { title: (items) => items[0].label, label: (item) => ` ${item.dataset.label}: ${item.parsed.y.toLocaleString()} entries` } }
     },
     scales: {
       x: { ticks: { maxTicksLimit: 8, font: { size: 10 } }, grid: { display: false } },
@@ -443,6 +499,32 @@ new Chart(trendCtx, {
     }
   }]
 });
+}
+
+function renderTrendRegionToggles(){
+  const wrap = document.getElementById('trendRegionToggles');
+  wrap.innerHTML = '';
+  REGIONS.forEach(region => {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'sign-toggle';
+    btn.textContent = region;
+    btn.setAttribute('aria-pressed', 'false');
+    btn.addEventListener('click', () => {
+      if(activeTrendRegions.has(region)){
+        activeTrendRegions.delete(region);
+        btn.classList.remove('active');
+        btn.setAttribute('aria-pressed', 'false');
+      } else {
+        activeTrendRegions.add(region);
+        btn.classList.add('active');
+        btn.setAttribute('aria-pressed', 'true');
+      }
+      trendChart.data.datasets = buildTrendDatasets();
+      trendChart.update();
+    });
+    wrap.appendChild(btn);
+  });
 }
 
 /* =========================================================
@@ -668,6 +750,7 @@ async function init(){
 
     renderTicker();
     renderTrendChart();
+    renderTrendRegionToggles();
     setupFilters();
     updateBenchmarkOptions();
     renderHeatmap();
