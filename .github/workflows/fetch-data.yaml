@@ -31,8 +31,9 @@ jobs:
 
           try:
               with open('data_archive.json') as f:
-                  data = json.load(f)
-          except FileNotFoundError:
+                  content = f.read().strip()
+              data = json.loads(content) if content else []
+          except (FileNotFoundError, json.JSONDecodeError):
               data = []
 
           if data:
