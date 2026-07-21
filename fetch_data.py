@@ -8,6 +8,12 @@ START_DATE = sys.argv[2]
 BASE_URL = "https://data.ny.gov/resource/t6yz-b64h.json"
 PAGE_SIZE = 50000       # Socrata's practical per-request cap, regardless of $limit
 MAX_PAGES = 20          # safety cap: up to 1,000,000 rows in one run
+# NOTE: $order includes ":id ASC" as a tiebreaker. toll_hour alone isn't
+# unique -- many rows (different regions/vehicle classes) share the same
+# timestamp -- so offset-based pagination on toll_hour alone isn't
+# guaranteed stable between requests. That instability can duplicate or
+# skip rows across page boundaries. :id (Socrata's internal row id) is
+# unique, so adding it as a secondary sort makes paging deterministic.
 
 headers = {"X-App-Token": API_KEY} if API_KEY else {}
 all_rows = []
@@ -16,7 +22,7 @@ offset = 0
 while True:
     params = {
         "$where": f"toll_hour >= '{START_DATE}'",
-        "$order": "toll_hour ASC",
+        "$order": "toll_hour ASC, :id ASC",
         "$limit": PAGE_SIZE,
         "$offset": offset,
     }
