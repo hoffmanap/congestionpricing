@@ -157,11 +157,16 @@
   .trend-wrap{ position: relative; height: 230px; }
 
   /* ---------- Trend region toggle buttons (mini street signs) ---------- */
+  .trend-granularity-toggles{
+    display: flex;
+    gap: 8px;
+    margin: 4px 0 10px;
+  }
   .trend-region-toggles{
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin: 4px 0 16px;
+    margin: 0 0 16px;
   }
   .sign-toggle{
     font-family: 'IBM Plex Mono', monospace;
@@ -275,6 +280,7 @@
   <section>
     <div class="sign-head"><span class="bolt-tr"></span><span class="bolt-bl"></span><h2 class="display">Archive Trend</h2></div>
     <span class="section-hint">daily total entries, full history — watch for the caution marker</span>
+    <div class="trend-granularity-toggles" id="trendGranularityToggles"></div>
     <div class="trend-region-toggles" id="trendRegionToggles"></div>
     <div class="panel trend-wrap">
       <canvas id="trendChart"></canvas>
@@ -419,49 +425,142 @@ const REGION_LINE_COLORS = ['#4C8DFF','#FF6A2C','#7ED957','#C77DFF','#FF4D8D','#
 let trendChart = null;
 const activeTrendRegions = new Set();
 
-function buildTrendDatasets(){
+/* ---- Period aggregation for the trend chart (day / week / month) ---- */
+let trendGranularity = 'day'; // set properly in init() once we know the archive's span
+
+function weekStartKey(dateStr){
+  const d = new Date(dateStr + 'T00:00:00Z');
+  const day = d.getUTCDay(); // 0 = Sunday
+  const diff = (day === 0 ? -6 : 1) - day; // shift back to that week's Monday
+  d.setUTCDate(d.getUTCDate() + diff);
+  return d.toISOString().slice(0,10);
+}
+function monthStartKey(dateStr){ return dateStr.slice(0,7); } // 'YYYY-MM'
+
+function periodKeyFor(dateStr, granularity){
+  if(granularity === 'week') return weekStartKey(dateStr);
+  if(granularity === 'month') return monthStartKey(dateStr);
+  return dateStr;
+}
+
+function formatPeriodLabel(key, granularity){
+  if(granularity === 'month'){
+    const [y,m] = key.split('-');
+    return MONTH_NAMES[parseInt(m,10)-1].slice(0,3) + ' ' + y;
+  }
+  if(granularity === 'week') return 'Wk of ' + key;
+  return key;
+}
+
+// Aggregates dailyTotals / dailyByRegion into the requested granularity.
+// Returns { labels, totalValues, regionValues(region) }.
+function aggregateTrend(granularity){
+  if(granularity === 'day'){
+    return {
+      labels: dailyTotals.map(r => r.date_str),
+      totalValues: dailyTotals.map(r => r.total),
+      regionValues: (region) => dailyTotals.map(r => (dailyByRegion[region]||{})[r.date_str] || 0)
+    };
+  }
+  const totalMap = {};
+  dailyTotals.forEach(r => {
+    const k = periodKeyFor(r.date_str, granularity);
+    totalMap[k] = (totalMap[k] || 0) + r.total;
+  });
+  const labels = Object.keys(totalMap).sort();
+  const regionValues = (region) => {
+    const byDate = dailyByRegion[region] || {};
+    const map = {};
+    Object.entries(byDate).forEach(([date, val]) => {
+      const k = periodKeyFor(date, granularity);
+      map[k] = (map[k] || 0) + val;
+    });
+    return labels.map(k => map[k] || 0);
+  };
+  return { labels, totalValues: labels.map(k => totalMap[k]), regionValues };
+}
+
+function buildTrendDatasets(agg){
   const datasets = [{
     label: 'Total (all CRZ)',
-    data: dailyTotals.map(r => r.total),
+    data: agg.totalValues,
     borderColor: '#FDB813', backgroundColor: 'rgba(253,184,19,0.08)',
-    borderWidth: 1.5, pointRadius: 0, fill: true, tension: 0.15
+    borderWidth: 1.5, pointRadius: 0, fill: true, tension: 0.15,
+    yAxisID: 'y'
   }];
   [...activeTrendRegions].forEach((region, i) => {
-    const byDate = dailyByRegion[region] || {};
     datasets.push({
       label: region,
-      data: dailyTotals.map(r => byDate[r.date_str] || 0),
+      data: agg.regionValues(region),
       borderColor: REGION_LINE_COLORS[i % REGION_LINE_COLORS.length],
       backgroundColor: 'transparent',
-      borderWidth: 1.5, pointRadius: 0, fill: false, tension: 0.15
+      borderWidth: 1.5, pointRadius: 0, fill: false, tension: 0.15,
+      yAxisID: 'y1'
     });
   });
   return datasets;
 }
 
+function findMarkerIndex(labels, granularity){
+  const eventDate = '2026-03-03';
+  if(granularity === 'day') return labels.indexOf(eventDate);
+  if(granularity === 'month') return labels.indexOf(monthStartKey(eventDate));
+  // week: find the bucket whose Monday-to-Sunday range contains the event
+  const eventTime = new Date(eventDate + 'T00:00:00Z').getTime();
+  for(let i=0;i<labels.length;i++){
+    const start = new Date(labels[i] + 'T00:00:00Z').getTime();
+    if(eventTime >= start && eventTime < start + 7*86400000) return i;
+  }
+  return -1;
+}
+
 function renderTrendChart(){
 const trendCtx = document.getElementById('trendChart').getContext('2d');
+const agg = aggregateTrend(trendGranularity);
 trendChart = new Chart(trendCtx, {
   type: 'line',
   data: {
-    labels: dailyTotals.map(r => r.date_str),
-    datasets: buildTrendDatasets()
+    labels: agg.labels,
+    datasets: buildTrendDatasets(agg)
   },
   options: {
     responsive: true, maintainAspectRatio: false,
     plugins: {
       legend: { display: true, labels: { boxWidth: 10, font: { size: 10 } } },
-      tooltip: { callbacks: { title: (items) => items[0].label, label: (item) => ` ${item.dataset.label}: ${item.parsed.y.toLocaleString()} entries` } }
+      tooltip: {
+        callbacks: {
+          title: (items) => formatPeriodLabel(items[0].label, trendGranularity),
+          label: (item) => ` ${item.dataset.label}: ${item.parsed.y.toLocaleString()} entries`
+        }
+      }
     },
     scales: {
-      x: { ticks: { maxTicksLimit: 8, font: { size: 10 } }, grid: { display: false } },
-      y: { ticks: { font: { size: 10 }, callback: (v) => (v/1000) + 'k' }, grid: { color: '#20252D' } }
+      x: {
+        ticks: {
+          maxTicksLimit: 8, font: { size: 10 },
+          callback: function(value){ return formatPeriodLabel(this.getLabelForValue(value), trendGranularity); }
+        },
+        grid: { display: false }
+      },
+      y: {
+        position: 'left',
+        ticks: { font: { size: 10 }, color: '#FDB813', callback: (v) => (v/1000) + 'k' },
+        grid: { color: '#20252D' },
+        title: { display: true, text: 'Total (all CRZ)', color: '#FDB813', font: { size: 10 } }
+      },
+      y1: {
+        position: 'right',
+        display: false, // only shown once a region is toggled on -- see toggle handler
+        ticks: { font: { size: 10 }, color: '#4C8DFF', callback: (v) => (v/1000) + 'k' },
+        grid: { display: false },
+        title: { display: true, text: 'Selected region(s) — own scale', color: '#4C8DFF', font: { size: 10 } }
+      }
     }
   },
   plugins: [{
     id: 'roadSignMarker',
     afterDraw(chart){
-      const idx = dailyTotals.findIndex(r => r.date_str === '2026-03-03');
+      const idx = findMarkerIndex(chart.data.labels, trendGranularity);
       if(idx === -1) return;
       const x = chart.scales.x.getPixelForValue(idx);
       const { top, bottom } = chart.chartArea;
@@ -501,6 +600,36 @@ trendChart = new Chart(trendCtx, {
 });
 }
 
+function refreshTrendChart(){
+  const agg = aggregateTrend(trendGranularity);
+  trendChart.data.labels = agg.labels;
+  trendChart.data.datasets = buildTrendDatasets(agg);
+  trendChart.options.scales.y1.display = activeTrendRegions.size > 0;
+  trendChart.update();
+}
+
+function renderTrendGranularityToggles(){
+  const wrap = document.getElementById('trendGranularityToggles');
+  wrap.innerHTML = '';
+  [['day','Daily'], ['week','Weekly'], ['month','Monthly']].forEach(([value, label]) => {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'sign-toggle' + (trendGranularity === value ? ' active' : '');
+    btn.textContent = label;
+    btn.setAttribute('aria-pressed', trendGranularity === value ? 'true' : 'false');
+    btn.addEventListener('click', () => {
+      if(trendGranularity === value) return;
+      trendGranularity = value;
+      wrap.querySelectorAll('.sign-toggle').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-pressed','false'); });
+      btn.classList.add('active');
+      btn.setAttribute('aria-pressed', 'true');
+      refreshTrendChart();
+    });
+    wrap.appendChild(btn);
+  });
+}
+
+
 function renderTrendRegionToggles(){
   const wrap = document.getElementById('trendRegionToggles');
   wrap.innerHTML = '';
@@ -520,8 +649,7 @@ function renderTrendRegionToggles(){
         btn.classList.add('active');
         btn.setAttribute('aria-pressed', 'true');
       }
-      trendChart.data.datasets = buildTrendDatasets();
-      trendChart.update();
+      refreshTrendChart();
     });
     wrap.appendChild(btn);
   });
@@ -698,6 +826,9 @@ function renderRegionCards(){
     const delta = first ? ((lastV-first)/first*100) : 0;
     const partial = compareKeys.length < keys.length;
 
+    // full series (including the partial current month) for the chart
+    const allValues = keys.map(k => monthly[k]);
+
     card.innerHTML = `
       <div class="region-card-head">
         <div class="shield">${REGION_CODE[region]}</div>
@@ -710,21 +841,43 @@ function renderRegionCards(){
     `;
     regionGrid.appendChild(card);
 
+    function formatMonthLabel(key){
+      const [y, m] = key.split('-');
+      return MONTH_NAMES[parseInt(m,10)-1].slice(0,3) + ' ' + y;
+    }
+
     const ctx = card.querySelector('canvas').getContext('2d');
     new Chart(ctx, {
       type: 'line',
       data: {
         labels: keys,
         datasets: [{
-          data: values,
+          data: allValues,
           borderColor: delta>=0 ? '#FDB813' : '#4C8DFF',
           backgroundColor: delta>=0 ? 'rgba(253,184,19,0.08)' : 'rgba(76,141,255,0.08)',
-          borderWidth: 1.5, pointRadius: 0, fill: true, tension: 0.3
+          borderWidth: 1.5, pointRadius: 2, pointHoverRadius: 4, fill: true, tension: 0.3
         }]
       },
       options: {
         responsive: true, maintainAspectRatio: false,
-        plugins: { legend: { display:false }, tooltip: { enabled:false } },
+        plugins: {
+          legend: { display:false },
+          tooltip: {
+            enabled: true,
+            callbacks: {
+              title: (items) => formatMonthLabel(items[0].label) + (items[0].dataIndex === keys.length-1 && partial ? ' (partial)' : ''),
+              label: (item) => {
+                const idx = item.dataIndex;
+                const cur = item.parsed.y;
+                if(idx === 0) return ` ${cur.toLocaleString()} entries (first month on record)`;
+                const prev = item.dataset.data[idx-1];
+                const pct = prev ? ((cur-prev)/prev*100) : null;
+                const pctStr = pct !== null ? ` (${pct>=0?'+':''}${pct.toFixed(1)}% vs ${formatMonthLabel(keys[idx-1])})` : '';
+                return ` ${cur.toLocaleString()} entries${pctStr}`;
+              }
+            }
+          }
+        },
         scales: { x: { display:false }, y: { display:false } }
       }
     });
@@ -748,8 +901,10 @@ async function init(){
     await loadData();
     document.getElementById('statusBanner').style.display = 'none';
 
+    trendGranularity = dailyTotals.length > 400 ? 'month' : (dailyTotals.length > 90 ? 'week' : 'day');
     renderTicker();
     renderTrendChart();
+    renderTrendGranularityToggles();
     renderTrendRegionToggles();
     setupFilters();
     updateBenchmarkOptions();
